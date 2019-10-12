@@ -1,0 +1,20 @@
+@media screen and (min-width: 1010px) {
+  #website-content p{
+    width: 60%;
+  }
+  #title_desc{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -50%);
+  }
+  #resp-desc{}
+  #second-content{
+    height: 700px;
+  }
+  .cardholder{
+    display: flex;
+    flex-direction: row;
+    transition: all .5s ease;
+  }
+}

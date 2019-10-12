@@ -1,0 +1,137 @@
+@import 'components/_fonts.scss';
+@import 'components/_colors.scss';
+@import 'components/_buttons.scss';
+@import 'components/_angled-edges.scss';
+@import 'components/_cards.scss';
+
+#website-content{
+  font-family: $poppins;
+  // width: 100%;
+  height: 750px;
+  padding: 1rem;
+  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  #title_desc{
+    padding: 1rem 3rem;
+  }
+  h1{
+    color: $grey;
+    margin-bottom: 0;
+  }
+  p{
+    color: $dgrey;
+    font-weight: bolder;
+  }
+}
+#second-content{
+  position: relative;
+  height: 1600px;
+  background: linear-gradient(to bottom, $dark, $darklight);
+  padding: 4rem 1rem 4rem 1rem;
+  z-index: 0;
+}
+#third-content{
+  background: linear-gradient(157.5deg, darken($pink, 10%), $dark);
+  position: relative;
+  height: 1700px;
+  width: 100%;
+  font-family: $poppins;
+  display:block;
+  .resp-desc{
+    padding: 38px 30px;
+    h1{
+      color: $white;
+      margin-bottom: 0;
+      font-size: 22px;
+    }
+    p{
+      color: $grey;
+      font-weight: bolder;
+      text-align: justify;
+      font-size: 17px;
+    }
+  }
+  .SEO-desc{
+    padding: 50px 38px 30px 38px;
+    text-align: right;
+    h1{
+      color: $white;
+      margin-bottom: 0;
+      font-size: 22px;
+    }
+    p{
+      color: $grey;
+      font-weight: bolder;
+      text-align: justify;
+      font-size: 17px;
+      a{
+        text-decoration: none;
+        color: lighten($pink, 25%);
+      }
+    }
+  }
+}
+#footer{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 730px;
+  .f-design{
+    padding: 120px 38px 30px 38px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+      h1{
+        color: $white;
+        text-shadow: 4px 4px 3px black;
+      }
+      p{
+        color: $dgrey;
+      }
+      ul{
+        list-style: none;
+        li{
+          padding: 12px;
+          font-weight: bold;
+          font-size: 18px;
+          a{
+            text-decoration: none;
+            color: $pink;
+          }
+        }
+      }
+      #addtionals{
+        p{
+          color: $bodytxt;
+        }
+      }
+  }
+  #footernote{
+    position: absolute;
+    bottom: 40px;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(0,0,0,.5);
+    color: $pink;
+    a{
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+}
+.style14 {
+  margin-left: -50px;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, transparent, $pink, transparent);
+  background-image: -moz-linear-gradient(left, transparent, $pink, transparent);
+  background-image: -ms-linear-gradient(left, transparent, $pink, transparent);
+  background-image: -o-linear-gradient(left, transparent, $pink, transparent);
+  width: 300px;
+}

@@ -1,0 +1,51 @@
+.cardholder{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  z-index: 1;
+  align-items: center;
+  height: 100%;
+  .card{
+  background: $dgrey;
+  width: 325px;
+  height: 490px;
+  position: relative;
+  z-index: 2;
+  border-radius: 13px;
+  box-shadow: 0 10px 6px -6px #777;
+  .img_section{
+    display: flex;
+    justify-content: center;
+  }
+  .cardtext{
+    padding: 20px;
+    color: darken($bodytxt, 10%);
+    font-family: $poppins;
+    h1{
+      font-size: 25px;
+      font-weight: normal;
+    }
+      p{
+        color: darken($dgrey, 60%);
+      }
+    }
+    a{
+      color: darken($pink, 5%);
+      font-family: $poppins;
+      padding: 0 20px;
+      text-decoration: none;
+      i{
+        font-size: 80%;
+      }
+    }
+  }
+}
+.webdesign{
+  height: 180px;
+  padding: 20px 12.5px;
+  text-decoration: none;
+}
+.webdesign_mod{
+  height: 180px;
+  padding: 20px 50px;
+}

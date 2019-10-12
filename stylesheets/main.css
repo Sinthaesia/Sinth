@@ -1,0 +1,911 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Poppins&display=swap");
+/* RESET */
+/* line 5, ../sass/components/_navigation.scss */
+body, html, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 9, ../sass/components/_navigation.scss */
+body {
+  background: #223242;
+}
+
+/* line 11, ../sass/components/_navigation.scss */
+nav {
+  height: 100px;
+  background: transparent;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+  transition: background-color 200ms linear;
+}
+
+/* line 19, ../sass/components/_navigation.scss */
+.scrolled {
+  background-color: #030b15 !important;
+  transition: all 200ms linear;
+  z-index: 1;
+  height: 75px;
+  line-height: 75px;
+}
+/* line 25, ../sass/components/_navigation.scss */
+.scrolled > .logo {
+  line-height: 75px;
+}
+
+/* line 29, ../sass/components/_navigation.scss */
+.logo_change {
+  opacity: 1 !important;
+  color: #3480E3 !important;
+  transition: opacity .75s ease-in;
+}
+
+/* line 34, ../sass/components/_navigation.scss */
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  text-transform: uppercase;
+  transition: all .3s ease;
+}
+/* line 44, ../sass/components/_navigation.scss */
+.nav-links:hover li {
+  opacity: .8;
+  filter: blur(2px);
+}
+/* line 48, ../sass/components/_navigation.scss */
+.nav-links li:hover {
+  opacity: 1;
+  filter: blur(0px);
+  transition: all .3s ease;
+}
+
+/* line 54, ../sass/components/_navigation.scss */
+.logo {
+  position: relative;
+  display: inline-block;
+  line-height: 100px;
+  color: #3480E3;
+  float: left;
+  margin-left: 150px;
+  font-size: 32px;
+  font-family: "Montserrat", sans-serif;
+  opacity: 0;
+}
+/* line 64, ../sass/components/_navigation.scss */
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  transition: all .3s ease-in-out;
+}
+/* line 68, ../sass/components/_navigation.scss */
+.logo a:hover {
+  color: #E53167;
+}
+
+/* line 73, ../sass/components/_navigation.scss */
+.nav-links li a {
+  color: #E53167;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all .3s ease;
+  position: relative;
+}
+/* line 80, ../sass/components/_navigation.scss */
+.nav-links li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 7px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #E53167;
+  border-width: 0 0 3px 3px;
+  transition: all .3s ease;
+  opacity: 0;
+}
+/* line 92, ../sass/components/_navigation.scss */
+.nav-links li a:hover::before {
+  bottom: -6px;
+  left: -12px;
+  opacity: 1;
+}
+/* line 97, ../sass/components/_navigation.scss */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #E53167;
+  border-width: 3px 3px 0 0;
+  transition: all .3s ease;
+  opacity: 0;
+}
+/* line 109, ../sass/components/_navigation.scss */
+.nav-links li a:hover::after {
+  top: -6px;
+  right: -12px;
+  opacity: 1;
+}
+/* line 114, ../sass/components/_navigation.scss */
+.nav-links li a:hover {
+  color: #3480E3;
+}
+
+/* line 119, ../sass/components/_navigation.scss */
+.landing {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 126, ../sass/components/_navigation.scss */
+.landing h1 {
+  margin: 100px;
+  font-size: 50px;
+  color: #ae5fce;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 133, ../sass/components/_navigation.scss */
+  .line {
+    width: 30px;
+    height: 3px;
+    background: #8eb8ef;
+    margin: 5px;
+  }
+  /* line 138, ../sass/components/_navigation.scss */
+  .line:nth-child(even) {
+    background: #f6b9cb;
+    width: 25px;
+  }
+
+  /* line 143, ../sass/components/_navigation.scss */
+  .logo {
+    margin-left: 5%;
+    color: #D8DFE8;
+    line-height: 75px;
+    font-weight: bold;
+  }
+
+  /* line 149, ../sass/components/_navigation.scss */
+  nav {
+    position: relative;
+    position: fixed;
+    width: 100%;
+    height: 75px;
+  }
+
+  /* line 156, ../sass/components/_navigation.scss */
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 4;
+  }
+
+  /* line 165, ../sass/components/_navigation.scss */
+  .nav-links {
+    position: fixed;
+    background: #222529;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  /* line 177, ../sass/components/_navigation.scss */
+  .nav-links.open {
+    clip-path: circle(1375px at 90% -10%);
+    -webkit-clip-path: circle(1375px at 90% -10%);
+    pointer-events: all;
+  }
+
+  /* line 182, ../sass/components/_navigation.scss */
+  .landing {
+    flex-direction: column;
+  }
+
+  /* line 185, ../sass/components/_navigation.scss */
+  .nav-links li {
+    opacity: 0;
+  }
+
+  /* line 188, ../sass/components/_navigation.scss */
+  .nav-links li a {
+    font-size: 25px;
+  }
+
+  /* line 191, ../sass/components/_navigation.scss */
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+
+  /* line 194, ../sass/components/_navigation.scss */
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+
+  /* line 197, ../sass/components/_navigation.scss */
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+
+  /* line 200, ../sass/components/_navigation.scss */
+  li.fade {
+    opacity: 1;
+  }
+}
+/* line 1, ../sass/components/_buttons.scss */
+#title_desc a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #E53167;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  font-weight: bold;
+}
+/* line 13, ../sass/components/_buttons.scss */
+#title_desc a:hover {
+  color: #223242;
+  background: #E53167;
+  box-shadow: 0 0 10px #E53167, 0 0 10px #E53167, 0 0 10px #E53167;
+  transition-delay: 1s;
+}
+/* line 19, ../sass/components/_buttons.scss */
+#title_desc a span {
+  position: absolute;
+  display: block;
+}
+/* line 22, ../sass/components/_buttons.scss */
+#title_desc a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #E53167);
+}
+/* line 29, ../sass/components/_buttons.scss */
+#title_desc a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #E53167);
+}
+/* line 36, ../sass/components/_buttons.scss */
+#title_desc a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #E53167);
+}
+/* line 43, ../sass/components/_buttons.scss */
+#title_desc a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #E53167);
+}
+/* line 51, ../sass/components/_buttons.scss */
+#title_desc a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+/* line 55, ../sass/components/_buttons.scss */
+#title_desc a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+/* line 60, ../sass/components/_buttons.scss */
+#title_desc a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+/* line 65, ../sass/components/_buttons.scss */
+#title_desc a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+/* line 125, ../sass/components/_angled-edges.scss */
+.angle--top-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% 100%, 0 100%);
+}
+@supports not (clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% 100%, 0 100%)) {
+  /* line 87, ../sass/components/_angled-edges.scss */
+  .angle--top-left::before, .angle--top-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 97, ../sass/components/_angled-edges.scss */
+  .angle--top-left::before {
+    top: 0;
+    border-width: 8vw 100vw 0 0;
+    border-color: #223242 transparent transparent transparent;
+  }
+}
+
+/* line 129, ../sass/components/_angled-edges.scss */
+.angle--top-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0 100%);
+}
+@supports not (clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0 100%)) {
+  /* line 87, ../sass/components/_angled-edges.scss */
+  .angle--top-right::before, .angle--top-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 97, ../sass/components/_angled-edges.scss */
+  .angle--top-right::before {
+    top: 0;
+    border-width: 8vw 0 0 100vw;
+    border-color: #223242 transparent transparent transparent;
+  }
+}
+
+/* line 133, ../sass/components/_angled-edges.scss */
+.angle--bottom-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
+}
+@supports not (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw))) {
+  /* line 87, ../sass/components/_angled-edges.scss */
+  .angle--bottom-left::before, .angle--bottom-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 105, ../sass/components/_angled-edges.scss */
+  .angle--bottom-left::after {
+    bottom: 0;
+    border-width: 0 100vw 8vw 0;
+    border-color: transparent transparent #223242 transparent;
+  }
+}
+
+/* line 137, ../sass/components/_angled-edges.scss */
+.angle--bottom-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
+}
+@supports not (clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%)) {
+  /* line 87, ../sass/components/_angled-edges.scss */
+  .angle--bottom-right::before, .angle--bottom-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 105, ../sass/components/_angled-edges.scss */
+  .angle--bottom-right::after {
+    bottom: 0;
+    border-width: 0 0 8vw 100vw;
+    border-color: transparent transparent #223242 transparent;
+  }
+}
+
+/* line 141, ../sass/components/_angled-edges.scss */
+.angle--both-left-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% 100%, 0 calc(100% - 7vw));
+}
+@supports not (clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% 100%, 0 calc(100% - 7vw))) {
+  /* line 87, ../sass/components/_angled-edges.scss */
+  .angle--both-left-left::before, .angle--both-left-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 97, ../sass/components/_angled-edges.scss */
+  .angle--both-left-left::before {
+    top: 0;
+    border-width: 8vw 100vw 0 0;
+    border-color: #223242 transparent transparent transparent;
+  }
+  /* line 105, ../sass/components/_angled-edges.scss */
+  .angle--both-left-left::after {
+    bottom: 0;
+    border-width: 0 100vw 8vw 0;
+    border-color: transparent transparent #223242 transparent;
+  }
+}
+
+/* line 145, ../sass/components/_angled-edges.scss */
+.angle--both-right-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% calc(100% - 7vw), 0 100%);
+}
+@supports not (clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% calc(100% - 7vw), 0 100%)) {
+  /* line 87, ../sass/components/_angled-edges.scss */
+  .angle--both-right-right::before, .angle--both-right-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 97, ../sass/components/_angled-edges.scss */
+  .angle--both-right-right::before {
+    top: 0;
+    border-width: 8vw 0 0 100vw;
+    border-color: #223242 transparent transparent transparent;
+  }
+  /* line 105, ../sass/components/_angled-edges.scss */
+  .angle--both-right-right::after {
+    bottom: 0;
+    border-width: 0 0 8vw 100vw;
+    border-color: transparent transparent #223242 transparent;
+  }
+}
+
+/* line 149, ../sass/components/_angled-edges.scss */
+.angle--both-left-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% calc(100% - 7vw), 0 100%);
+}
+@supports not (clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% calc(100% - 7vw), 0 100%)) {
+  /* line 87, ../sass/components/_angled-edges.scss */
+  .angle--both-left-right::before, .angle--both-left-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 97, ../sass/components/_angled-edges.scss */
+  .angle--both-left-right::before {
+    top: 0;
+    border-width: 8vw 100vw 0 0;
+    border-color: #223242 transparent transparent transparent;
+  }
+  /* line 105, ../sass/components/_angled-edges.scss */
+  .angle--both-left-right::after {
+    bottom: 0;
+    border-width: 0 0 8vw 100vw;
+    border-color: transparent transparent #223242 transparent;
+  }
+}
+
+/* line 153, ../sass/components/_angled-edges.scss */
+.angle--both-right-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0 calc(100% - 7vw));
+}
+@supports not (clip-path: polygon(0 0, 100% calc(0% + 7vw), 100% 100%, 0 calc(100% - 7vw))) {
+  /* line 87, ../sass/components/_angled-edges.scss */
+  .angle--both-right-left::before, .angle--both-right-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 97, ../sass/components/_angled-edges.scss */
+  .angle--both-right-left::before {
+    top: 0;
+    border-width: 8vw 0 0 100vw;
+    border-color: #223242 transparent transparent transparent;
+  }
+  /* line 105, ../sass/components/_angled-edges.scss */
+  .angle--both-right-left::after {
+    bottom: 0;
+    border-width: 0 100vw 8vw 0;
+    border-color: transparent transparent #223242 transparent;
+  }
+}
+
+/* line 158, ../sass/components/_angled-edges.scss */
+.angle__content {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 164, ../sass/components/_angled-edges.scss */
+.angle--colour {
+  color: #fff;
+  background-color: #2196F3;
+  text-align: center;
+  padding: 10% 0;
+}
+
+/* line 1, ../sass/components/_cards.scss */
+.cardholder {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  z-index: 1;
+  align-items: center;
+  height: 100%;
+}
+/* line 8, ../sass/components/_cards.scss */
+.cardholder .card {
+  background: #AFBED3;
+  width: 325px;
+  height: 490px;
+  position: relative;
+  z-index: 2;
+  border-radius: 13px;
+  box-shadow: 0 10px 6px -6px #777;
+}
+/* line 16, ../sass/components/_cards.scss */
+.cardholder .card .img_section {
+  display: flex;
+  justify-content: center;
+}
+/* line 20, ../sass/components/_cards.scss */
+.cardholder .card .cardtext {
+  padding: 20px;
+  color: #4f5d66;
+  font-family: "Poppins", sans-serif;
+}
+/* line 24, ../sass/components/_cards.scss */
+.cardholder .card .cardtext h1 {
+  font-size: 25px;
+  font-weight: normal;
+}
+/* line 28, ../sass/components/_cards.scss */
+.cardholder .card .cardtext p {
+  color: #1c2634;
+}
+/* line 32, ../sass/components/_cards.scss */
+.cardholder .card a {
+  color: #e01c57;
+  font-family: "Poppins", sans-serif;
+  padding: 0 20px;
+  text-decoration: none;
+}
+/* line 37, ../sass/components/_cards.scss */
+.cardholder .card a i {
+  font-size: 80%;
+}
+
+/* line 43, ../sass/components/_cards.scss */
+.webdesign {
+  height: 180px;
+  padding: 20px 12.5px;
+  text-decoration: none;
+}
+
+/* line 48, ../sass/components/_cards.scss */
+.webdesign_mod {
+  height: 180px;
+  padding: 20px 50px;
+}
+
+/* line 7, ../sass/components/_website-layout.scss */
+#website-content {
+  font-family: "Poppins", sans-serif;
+  height: 750px;
+  padding: 1rem;
+  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+/* line 16, ../sass/components/_website-layout.scss */
+#website-content #title_desc {
+  padding: 1rem 3rem;
+}
+/* line 19, ../sass/components/_website-layout.scss */
+#website-content h1 {
+  color: #D8DFE8;
+  margin-bottom: 0;
+}
+/* line 23, ../sass/components/_website-layout.scss */
+#website-content p {
+  color: #AFBED3;
+  font-weight: bolder;
+}
+
+/* line 28, ../sass/components/_website-layout.scss */
+#second-content {
+  position: relative;
+  height: 1600px;
+  background: linear-gradient(to bottom, #222529, #223242);
+  padding: 4rem 1rem 4rem 1rem;
+  z-index: 0;
+}
+
+/* line 35, ../sass/components/_website-layout.scss */
+#third-content {
+  background: linear-gradient(157.5deg, #ca194e, #222529);
+  position: relative;
+  height: 1700px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  display: block;
+}
+/* line 42, ../sass/components/_website-layout.scss */
+#third-content .resp-desc {
+  padding: 38px 30px;
+}
+/* line 44, ../sass/components/_website-layout.scss */
+#third-content .resp-desc h1 {
+  color: #FFFFFF;
+  margin-bottom: 0;
+  font-size: 22px;
+}
+/* line 49, ../sass/components/_website-layout.scss */
+#third-content .resp-desc p {
+  color: #D8DFE8;
+  font-weight: bolder;
+  text-align: justify;
+  font-size: 17px;
+}
+/* line 56, ../sass/components/_website-layout.scss */
+#third-content .SEO-desc {
+  padding: 50px 38px 30px 38px;
+  text-align: right;
+}
+/* line 59, ../sass/components/_website-layout.scss */
+#third-content .SEO-desc h1 {
+  color: #FFFFFF;
+  margin-bottom: 0;
+  font-size: 22px;
+}
+/* line 64, ../sass/components/_website-layout.scss */
+#third-content .SEO-desc p {
+  color: #D8DFE8;
+  font-weight: bolder;
+  text-align: justify;
+  font-size: 17px;
+}
+/* line 69, ../sass/components/_website-layout.scss */
+#third-content .SEO-desc p a {
+  text-decoration: none;
+  color: #f3a2bb;
+}
+
+/* line 76, ../sass/components/_website-layout.scss */
+#footer {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 730px;
+}
+/* line 81, ../sass/components/_website-layout.scss */
+#footer .f-design {
+  padding: 120px 38px 30px 38px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/* line 87, ../sass/components/_website-layout.scss */
+#footer .f-design h1 {
+  color: #FFFFFF;
+  text-shadow: 4px 4px 3px black;
+}
+/* line 91, ../sass/components/_website-layout.scss */
+#footer .f-design p {
+  color: #AFBED3;
+}
+/* line 94, ../sass/components/_website-layout.scss */
+#footer .f-design ul {
+  list-style: none;
+}
+/* line 96, ../sass/components/_website-layout.scss */
+#footer .f-design ul li {
+  padding: 12px;
+  font-weight: bold;
+  font-size: 18px;
+}
+/* line 100, ../sass/components/_website-layout.scss */
+#footer .f-design ul li a {
+  text-decoration: none;
+  color: #E53167;
+}
+/* line 107, ../sass/components/_website-layout.scss */
+#footer .f-design #addtionals p {
+  color: #657783;
+}
+/* line 112, ../sass/components/_website-layout.scss */
+#footer #footernote {
+  position: absolute;
+  bottom: 40px;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #E53167;
+}
+/* line 122, ../sass/components/_website-layout.scss */
+#footer #footernote a {
+  text-decoration: none;
+  color: #3480E3;
+}
+
+/* line 128, ../sass/components/_website-layout.scss */
+.style14 {
+  margin-left: -50px;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, transparent, #E53167, transparent);
+  background-image: -moz-linear-gradient(left, transparent, #E53167, transparent);
+  background-image: -ms-linear-gradient(left, transparent, #E53167, transparent);
+  background-image: -o-linear-gradient(left, transparent, #E53167, transparent);
+  width: 300px;
+}
+
+/* line 1, ../sass/components/_svg.scss */
+#topsvg {
+  position: absolute;
+  top: -180px;
+  left: -125px;
+  z-index: 3;
+}
+
+/* line 7, ../sass/components/_svg.scss */
+#code_svg {
+  height: 500px;
+  margin: auto;
+  position: absolute;
+  top: 55%;
+  left: 60%;
+  transform: translate(-50%, -40%);
+}
+
+/* line 15, ../sass/components/_svg.scss */
+#pilltop_svg {
+  position: absolute;
+  right: -115px;
+  top: 150px;
+  overflow: hidden;
+}
+
+/* line 21, ../sass/components/_svg.scss */
+#trileft_svg {
+  position: absolute;
+  left: -165px;
+  top: 500px;
+}
+
+/* line 26, ../sass/components/_svg.scss */
+#bcard_svg {
+  z-index: 1;
+  position: absolute;
+  top: -250px;
+  left: -250px;
+  overflow: visible;
+  transform: rotate(161deg);
+}
+
+/* line 34, ../sass/components/_svg.scss */
+.responsive {
+  width: 340px;
+  height: 200px;
+  opacity: 1;
+}
+
+/* line 39, ../sass/components/_svg.scss */
+.domain {
+  width: 340px;
+  height: 200px;
+}
+
+/* line 43, ../sass/components/_svg.scss */
+.svg-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 49, ../sass/components/_svg.scss */
+.dtri {
+  position: absolute;
+  left: -280px;
+  top: 425px;
+  z-index: -1;
+  transform: rotate(37deg);
+}
+
+/* line 56, ../sass/components/_svg.scss */
+.smudge {
+  position: absolute;
+  bottom: 609px;
+  width: 650px;
+  left: 70px;
+  z-index: -1;
+}
+
+/* line 63, ../sass/components/_svg.scss */
+.footerwave {
+  position: absolute;
+  top: 0;
+  width: 1920px;
+  left: -960px;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 72, ../sass/components/_svg.scss */
+  #code_svg {
+    height: 250px !important;
+  }
+}
+@media screen and (min-width: 1010px) {
+  /* line 2, ../sass/components/_responsive.scss */
+  #website-content p {
+    width: 60%;
+  }
+
+  /* line 5, ../sass/components/_responsive.scss */
+  #title_desc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -50%);
+  }
+
+  /* line 12, ../sass/components/_responsive.scss */
+  #second-content {
+    height: 700px;
+  }
+
+  /* line 15, ../sass/components/_responsive.scss */
+  .cardholder {
+    display: flex;
+    flex-direction: row;
+    transition: all .5s ease;
+  }
+}

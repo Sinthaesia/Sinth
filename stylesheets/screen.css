@@ -1,0 +1,6166 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Poppins&display=swap");
+/* RESET */
+/* line 5, ../sass/components/_navigation.scss */
+body, html, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 9, ../sass/components/_navigation.scss */
+body {
+  background: #223242;
+}
+
+/* line 11, ../sass/components/_navigation.scss */
+nav {
+  height: 100px;
+  background: transparent;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+  transition: background-color 200ms linear;
+}
+
+/* line 19, ../sass/components/_navigation.scss */
+.scrolled {
+  background-color: #030b15 !important;
+  transition: all 200ms linear;
+  z-index: 1;
+  height: 75px;
+  line-height: 75px;
+}
+/* line 25, ../sass/components/_navigation.scss */
+.scrolled > .logo {
+  line-height: 75px;
+}
+
+/* line 29, ../sass/components/_navigation.scss */
+.logo_change {
+  opacity: 1 !important;
+  color: #3480E3 !important;
+  transition: opacity .75s ease-in;
+}
+
+/* line 34, ../sass/components/_navigation.scss */
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  text-transform: uppercase;
+  transition: all .3s ease;
+}
+/* line 44, ../sass/components/_navigation.scss */
+.nav-links:hover li {
+  opacity: .8;
+  filter: blur(2px);
+}
+/* line 48, ../sass/components/_navigation.scss */
+.nav-links li:hover {
+  opacity: 1;
+  filter: blur(0px);
+  transition: all .3s ease;
+}
+
+/* line 54, ../sass/components/_navigation.scss */
+.logo {
+  position: relative;
+  display: inline-block;
+  line-height: 100px;
+  color: #3480E3;
+  float: left;
+  margin-left: 150px;
+  font-size: 32px;
+  font-family: "Montserrat", sans-serif;
+  opacity: 0;
+}
+/* line 64, ../sass/components/_navigation.scss */
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  transition: all .3s ease-in-out;
+}
+/* line 68, ../sass/components/_navigation.scss */
+.logo a:hover {
+  color: #E53167;
+}
+
+/* line 73, ../sass/components/_navigation.scss */
+.nav-links li a {
+  color: #E53167;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all .3s ease;
+  position: relative;
+}
+/* line 80, ../sass/components/_navigation.scss */
+.nav-links li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 7px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #E53167;
+  border-width: 0 0 3px 3px;
+  transition: all .3s ease;
+  opacity: 0;
+}
+/* line 92, ../sass/components/_navigation.scss */
+.nav-links li a:hover::before {
+  bottom: -6px;
+  left: -12px;
+  opacity: 1;
+}
+/* line 97, ../sass/components/_navigation.scss */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #E53167;
+  border-width: 3px 3px 0 0;
+  transition: all .3s ease;
+  opacity: 0;
+}
+/* line 109, ../sass/components/_navigation.scss */
+.nav-links li a:hover::after {
+  top: -6px;
+  right: -12px;
+  opacity: 1;
+}
+/* line 114, ../sass/components/_navigation.scss */
+.nav-links li a:hover {
+  color: #3480E3;
+}
+
+/* line 119, ../sass/components/_navigation.scss */
+.landing {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 126, ../sass/components/_navigation.scss */
+.landing h1 {
+  margin: 100px;
+  font-size: 50px;
+  color: #ae5fce;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 133, ../sass/components/_navigation.scss */
+  .line {
+    width: 30px;
+    height: 3px;
+    background: #8eb8ef;
+    margin: 5px;
+  }
+  /* line 138, ../sass/components/_navigation.scss */
+  .line:nth-child(even) {
+    background: #f6b9cb;
+    width: 25px;
+  }
+
+  /* line 143, ../sass/components/_navigation.scss */
+  .logo {
+    margin-left: 5%;
+    color: #D8DFE8;
+    line-height: 75px;
+    font-weight: bold;
+  }
+
+  /* line 149, ../sass/components/_navigation.scss */
+  nav {
+    position: relative;
+    position: fixed;
+    width: 100%;
+    height: 75px;
+  }
+
+  /* line 156, ../sass/components/_navigation.scss */
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 4;
+  }
+
+  /* line 165, ../sass/components/_navigation.scss */
+  .nav-links {
+    position: fixed;
+    background: #222529;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  /* line 177, ../sass/components/_navigation.scss */
+  .nav-links.open {
+    clip-path: circle(1375px at 90% -10%);
+    -webkit-clip-path: circle(1375px at 90% -10%);
+    pointer-events: all;
+  }
+
+  /* line 182, ../sass/components/_navigation.scss */
+  .landing {
+    flex-direction: column;
+  }
+
+  /* line 185, ../sass/components/_navigation.scss */
+  .nav-links li {
+    opacity: 0;
+  }
+
+  /* line 188, ../sass/components/_navigation.scss */
+  .nav-links li a {
+    font-size: 25px;
+  }
+
+  /* line 191, ../sass/components/_navigation.scss */
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+
+  /* line 194, ../sass/components/_navigation.scss */
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+
+  /* line 197, ../sass/components/_navigation.scss */
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+
+  /* line 200, ../sass/components/_navigation.scss */
+  li.fade {
+    opacity: 1;
+  }
+}
+/* line 8, ../sass/screen.scss */
+.mediaViewInfo {
+  --web-view-name: home;
+  --web-view-id: home;
+  --web-scale-to-fit: true;
+  --web-scale-to-fit-type: width;
+  --web-scale-on-resize: true;
+  --web-center-horizontally: true;
+  --web-enable-deep-linking: true;
+  --web-page-font: Poppins;
+}
+
+/* line 18, ../sass/screen.scss */
+:root {
+  --web-view-ids: home;
+}
+
+/* line 21, ../sass/screen.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 25, ../sass/screen.scss */
+#home {
+  position: absolute;
+  box-sizing: border-box;
+  transform: translateX(-50%);
+  left: 50%;
+  background: #223242;
+  width: 1920px;
+  height: 4117px;
+  font-family: Poppins;
+  background-color: #223242;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  --web-view-name: home;
+  --web-view-id: home;
+  --web-scale-to-fit: true;
+  --web-scale-to-fit-type: width;
+  --web-scale-on-resize: true;
+  --web-center-horizontally: true;
+  --web-enable-deep-linking: true;
+  --web-page-font: Poppins;
+}
+
+/* line 47, ../sass/screen.scss */
+#Path_653 {
+  opacity: 0.15;
+}
+
+/* line 50, ../sass/screen.scss */
+.Path_653 {
+  overflow: visible;
+  position: absolute;
+  top: 1016.453px;
+  left: 585.897px;
+  width: 1505.028px;
+  height: 939.924px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 59, ../sass/screen.scss */
+.Path_652 {
+  overflow: visible;
+  position: absolute;
+  top: 916.469px;
+  left: 75.276px;
+  width: 476.002px;
+  height: 673.597px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 68, ../sass/screen.scss */
+#Sinthaesia {
+  position: absolute;
+  left: 278px;
+  top: 51px;
+  overflow: visible;
+  width: 149px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Poppins, Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  color: #3480e3;
+}
+
+/* line 82, ../sass/screen.scss */
+#Home {
+  position: absolute;
+  left: 1151px;
+  top: 55px;
+  overflow: visible;
+  width: 67px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Poppins, Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  color: #e53167;
+}
+
+/* line 96, ../sass/screen.scss */
+#Services {
+  position: absolute;
+  left: 1334px;
+  top: 55px;
+  overflow: visible;
+  width: 94px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Poppins, Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  color: #e53167;
+}
+
+/* line 110, ../sass/screen.scss */
+#Contact {
+  position: absolute;
+  left: 1544px;
+  top: 55px;
+  overflow: visible;
+  width: 92px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Poppins, Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  color: #e53167;
+}
+
+/* line 124, ../sass/screen.scss */
+#Sinthaesia_A0_Text_5 {
+  position: absolute;
+  left: 278px;
+  top: 399.5px;
+  overflow: visible;
+  width: 284px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 65px;
+  color: #d8dfe8;
+}
+
+/* line 138, ../sass/screen.scss */
+#Website_designer___developer__ {
+  position: absolute;
+  left: 278px;
+  top: 486px;
+  overflow: visible;
+  width: 264px;
+  white-space: nowrap;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #afbed3;
+}
+
+/* line 154, ../sass/screen.scss */
+#Group_52 {
+  position: absolute;
+  width: 190px;
+  height: 60px;
+  left: 278px;
+  top: 582px;
+  overflow: visible;
+}
+
+/* line 162, ../sass/screen.scss */
+#Group_51 {
+  position: absolute;
+  width: 190px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+
+/* line 170, ../sass/screen.scss */
+#Group_50 {
+  position: absolute;
+  width: 190px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+
+/* line 178, ../sass/screen.scss */
+#Group_49 {
+  position: absolute;
+  width: 190px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+
+/* line 186, ../sass/screen.scss */
+#Group_48 {
+  position: absolute;
+  width: 190px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+
+/* line 194, ../sass/screen.scss */
+.Rectangle_90 {
+  position: absolute;
+  overflow: visible;
+  width: 190px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 202, ../sass/screen.scss */
+#Learn_more {
+  position: absolute;
+  left: 32px;
+  top: 15px;
+  overflow: visible;
+  width: 127px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Poppins, Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  color: white;
+}
+
+/* line 216, ../sass/screen.scss */
+#Search_engine_optimalization {
+  position: absolute;
+  left: 1121px;
+  top: 2820px;
+  overflow: visible;
+  width: 553px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 46px;
+  color: #d8dfe8;
+}
+
+/* line 230, ../sass/screen.scss */
+#Multi_device_responsive {
+  position: absolute;
+  left: 262px;
+  top: 2174px;
+  overflow: visible;
+  width: 460px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 46px;
+  color: #d8dfe8;
+}
+
+/* line 244, ../sass/screen.scss */
+#In_2019_there_are_more_devices {
+  position: absolute;
+  left: 262px;
+  top: 2237px;
+  overflow: hidden;
+  width: 421px;
+  height: 109px;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #afbed3;
+}
+
+/* line 260, ../sass/screen.scss */
+#We_ensure_that_all_of_our_webs {
+  position: absolute;
+  left: 1121px;
+  top: 2883px;
+  overflow: hidden;
+  width: 421px;
+  height: 49px;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #afbed3;
+}
+
+/* line 276, ../sass/screen.scss */
+#Rectangle_91 {
+  filter: drop-shadow(0px 3px 20px rgba(52, 128, 227, 0.302));
+}
+
+/* line 279, ../sass/screen.scss */
+.Rectangle_91 {
+  position: absolute;
+  overflow: visible;
+  width: 560px;
+  height: 660px;
+  left: 158px;
+  top: 1168px;
+}
+
+/* line 287, ../sass/screen.scss */
+#Rectangle_94 {
+  filter: drop-shadow(0px 3px 20px rgba(52, 128, 227, 0.302));
+}
+
+/* line 290, ../sass/screen.scss */
+.Rectangle_94 {
+  position: absolute;
+  overflow: visible;
+  width: 560px;
+  height: 660px;
+  left: 710px;
+  top: 1168px;
+}
+
+/* line 298, ../sass/screen.scss */
+#Rectangle_95 {
+  filter: drop-shadow(0px 3px 20px rgba(52, 128, 227, 0.18));
+}
+
+/* line 301, ../sass/screen.scss */
+.Rectangle_95 {
+  position: absolute;
+  overflow: visible;
+  width: 560px;
+  height: 660px;
+  left: 1262px;
+  top: 1168px;
+}
+
+/* line 309, ../sass/screen.scss */
+#Websites {
+  position: absolute;
+  left: 195px;
+  top: 1544px;
+  overflow: visible;
+  width: 179px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 46px;
+  color: #223242;
+}
+
+/* line 323, ../sass/screen.scss */
+#Graphic_design {
+  position: absolute;
+  left: 747px;
+  top: 1544px;
+  overflow: visible;
+  width: 292px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 46px;
+  color: #223242;
+}
+
+/* line 337, ../sass/screen.scss */
+#Maintenance_mode {
+  position: absolute;
+  left: 1299px;
+  top: 1544px;
+  overflow: visible;
+  width: 370px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 46px;
+  color: #223242;
+}
+
+/* line 351, ../sass/screen.scss */
+#With_creativity_in_mind__we_de {
+  position: absolute;
+  left: 195px;
+  top: 1607px;
+  overflow: hidden;
+  width: 421px;
+  height: 49px;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #657783;
+}
+
+/* line 367, ../sass/screen.scss */
+#Varying_from_business_card_des {
+  position: absolute;
+  left: 750px;
+  top: 1607px;
+  overflow: hidden;
+  width: 421px;
+  height: 49px;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #657783;
+}
+
+/* line 383, ../sass/screen.scss */
+#Have_a_website_but_can_t_find_ {
+  position: absolute;
+  left: 1299px;
+  top: 1607px;
+  overflow: hidden;
+  width: 421px;
+  height: 65px;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #657783;
+}
+
+/* line 399, ../sass/screen.scss */
+#Learn_more_A0_Text_18 {
+  position: absolute;
+  left: 747px;
+  top: 1706px;
+  overflow: visible;
+  width: 98px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Poppins, Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: #e53167;
+}
+
+/* line 413, ../sass/screen.scss */
+#Get_updated {
+  position: absolute;
+  left: 1299px;
+  top: 1706px;
+  overflow: visible;
+  width: 109px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Poppins, Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: #e53167;
+}
+
+/* line 427, ../sass/screen.scss */
+#Arrow {
+  position: absolute;
+  width: 20.073px;
+  height: 20.073px;
+  left: 281px;
+  top: 1706px;
+  overflow: visible;
+}
+
+/* line 435, ../sass/screen.scss */
+#Group_2 {
+  transform: rotate(180deg);
+  transform-origin: left;
+  position: absolute;
+  width: 20.073px;
+  height: 20.073px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+
+/* line 445, ../sass/screen.scss */
+#Rectangle_12 {
+  opacity: 0;
+}
+
+/* line 448, ../sass/screen.scss */
+.Rectangle_12 {
+  position: absolute;
+  overflow: visible;
+  width: 20.073px;
+  height: 20.073px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 456, ../sass/screen.scss */
+.Path_5 {
+  overflow: visible;
+  position: absolute;
+  top: 4.349px;
+  left: 10.455px;
+  width: 6.44px;
+  height: 11.208px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 465, ../sass/screen.scss */
+.Path_6 {
+  overflow: visible;
+  position: absolute;
+  top: 9.2px;
+  left: 3.346px;
+  width: 12.128px;
+  height: 1.673px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 474, ../sass/screen.scss */
+#Arrow_A0_Component_2 {
+  position: absolute;
+  width: 20.073px;
+  height: 20.073px;
+  left: 851px;
+  top: 1708px;
+  overflow: visible;
+}
+
+/* line 482, ../sass/screen.scss */
+#Group_2_A0_Group_7 {
+  transform: rotate(180deg);
+  transform-origin: left;
+  position: absolute;
+  width: 20.073px;
+  height: 20.073px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+
+/* line 492, ../sass/screen.scss */
+#Rectangle_12_A0_Rectangle_6 {
+  opacity: 0;
+}
+
+/* line 495, ../sass/screen.scss */
+.Rectangle_12_A0_Rectangle_6 {
+  position: absolute;
+  overflow: visible;
+  width: 20.073px;
+  height: 20.073px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 503, ../sass/screen.scss */
+.Path_5_A0_Path_5 {
+  overflow: visible;
+  position: absolute;
+  top: 4.349px;
+  left: 10.455px;
+  width: 6.44px;
+  height: 11.208px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 512, ../sass/screen.scss */
+.Path_6_A0_Path_6 {
+  overflow: visible;
+  position: absolute;
+  top: 9.2px;
+  left: 3.346px;
+  width: 12.128px;
+  height: 1.673px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 521, ../sass/screen.scss */
+#Arrow_A0_Component_3 {
+  position: absolute;
+  width: 20.073px;
+  height: 20.073px;
+  left: 1414px;
+  top: 1708px;
+  overflow: visible;
+}
+
+/* line 529, ../sass/screen.scss */
+#Group_2_A0_Group_8 {
+  transform: rotate(180deg);
+  transform-origin: left;
+  position: absolute;
+  width: 20.073px;
+  height: 20.073px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+
+/* line 539, ../sass/screen.scss */
+#Rectangle_12_A0_Rectangle_7 {
+  opacity: 0;
+}
+
+/* line 542, ../sass/screen.scss */
+.Rectangle_12_A0_Rectangle_7 {
+  position: absolute;
+  overflow: visible;
+  width: 20.073px;
+  height: 20.073px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 550, ../sass/screen.scss */
+.Path_5_A0_Path_7 {
+  overflow: visible;
+  position: absolute;
+  top: 4.349px;
+  left: 10.455px;
+  width: 6.44px;
+  height: 11.208px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 559, ../sass/screen.scss */
+.Path_6_A0_Path_8 {
+  overflow: visible;
+  position: absolute;
+  top: 9.2px;
+  left: 3.346px;
+  width: 12.128px;
+  height: 1.673px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 568, ../sass/screen.scss */
+#More_info {
+  position: absolute;
+  left: 195px;
+  top: 1704px;
+  overflow: visible;
+  width: 80px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Poppins, Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: #e53167;
+}
+
+/* line 582, ../sass/screen.scss */
+#Path_651 {
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.161));
+}
+
+/* line 585, ../sass/screen.scss */
+.Path_651 {
+  overflow: visible;
+  position: absolute;
+  top: -88.215px;
+  left: -78.829px;
+  width: 363.843px;
+  height: 506.584px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 594, ../sass/screen.scss */
+#Polygon_1 {
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.161));
+}
+
+/* line 597, ../sass/screen.scss */
+.Polygon_1 {
+  overflow: visible;
+  position: absolute;
+  top: 734.576px;
+  left: -99.404px;
+  width: 368.182px;
+  height: 398.221px;
+  transform: rotate(102deg);
+}
+
+/* line 606, ../sass/screen.scss */
+#Polygon_3 {
+  opacity: 0.15;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.161));
+}
+
+/* line 610, ../sass/screen.scss */
+.Polygon_3 {
+  overflow: visible;
+  position: absolute;
+  top: 2167.742px;
+  left: 1709.575px;
+  width: 390.85px;
+  height: 415.89px;
+  transform: rotate(-72deg);
+}
+
+/* line 619, ../sass/screen.scss */
+.Polygon_2 {
+  overflow: visible;
+  position: absolute;
+  top: 774.103px;
+  left: -63.509px;
+  width: 236.333px;
+  height: 259.44px;
+  transform: rotate(102deg);
+}
+
+/* line 628, ../sass/screen.scss */
+.Polygon_4 {
+  overflow: visible;
+  position: absolute;
+  top: 2209.061px;
+  left: 1748.181px;
+  width: 253.725px;
+  height: 272.986px;
+  transform: rotate(-72deg);
+}
+
+/* line 637, ../sass/screen.scss */
+#Ellipse_80 {
+  opacity: 0.15;
+}
+
+/* line 640, ../sass/screen.scss */
+.Ellipse_80 {
+  position: absolute;
+  overflow: visible;
+  width: 164.194px;
+  height: 199.006px;
+  left: -67.097px;
+  top: 1788.997px;
+  transform: rotate(22deg);
+}
+
+/* line 649, ../sass/screen.scss */
+#Ellipse_90 {
+  opacity: 0.24;
+}
+
+/* line 652, ../sass/screen.scss */
+.Ellipse_90 {
+  position: absolute;
+  overflow: visible;
+  width: 199.91px;
+  height: 193.695px;
+  left: 1820.045px;
+  top: 511.653px;
+  transform: rotate(229deg);
+}
+
+/* line 661, ../sass/screen.scss */
+#Ellipse_81 {
+  opacity: 0.15;
+}
+
+/* line 664, ../sass/screen.scss */
+.Ellipse_81 {
+  position: absolute;
+  overflow: visible;
+  width: 201.241px;
+  height: 190.383px;
+  left: -35.524px;
+  top: 3500.308px;
+  transform: rotate(232deg);
+}
+
+/* line 673, ../sass/screen.scss */
+.Path_654 {
+  overflow: visible;
+  position: absolute;
+  top: 2043.45px;
+  left: -274.345px;
+  width: 1177.596px;
+  height: 1659.472px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 682, ../sass/screen.scss */
+#undraw_code_review_l1q9 {
+  position: absolute;
+  width: 897.197px;
+  height: 681.145px;
+  left: 814px;
+  top: 168px;
+  overflow: visible;
+}
+
+/* line 690, ../sass/screen.scss */
+.Path_655 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 21.965px;
+  width: 721.694px;
+  height: 607.674px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 699, ../sass/screen.scss */
+.Ellipse_82 {
+  position: absolute;
+  overflow: visible;
+  width: 806.221px;
+  height: 49.393px;
+  left: 47.158px;
+  top: 577.579px;
+}
+
+/* line 707, ../sass/screen.scss */
+#Ellipse_83 {
+  opacity: 0.1;
+}
+
+/* line 710, ../sass/screen.scss */
+.Ellipse_83 {
+  position: absolute;
+  overflow: visible;
+  width: 686.722px;
+  height: 32.663px;
+  left: 106.907px;
+  top: 585.546px;
+}
+
+/* line 718, ../sass/screen.scss */
+.Ellipse_84 {
+  position: absolute;
+  overflow: visible;
+  width: 338.093px;
+  height: 29.477px;
+  left: 0px;
+  top: 651.668px;
+}
+
+/* line 726, ../sass/screen.scss */
+#Ellipse_85 {
+  opacity: 0.1;
+}
+
+/* line 729, ../sass/screen.scss */
+.Ellipse_85 {
+  position: absolute;
+  overflow: visible;
+  width: 287.98px;
+  height: 19.492px;
+  left: 25.057px;
+  top: 656.423px;
+}
+
+/* line 737, ../sass/screen.scss */
+.Rectangle_96 {
+  position: absolute;
+  overflow: visible;
+  width: 599.089px;
+  height: 470.03px;
+  left: 156.3px;
+  top: 129.059px;
+}
+
+/* line 745, ../sass/screen.scss */
+.Path_656 {
+  overflow: visible;
+  position: absolute;
+  top: 189.706px;
+  left: 299.44px;
+  width: 151.381px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 754, ../sass/screen.scss */
+.Path_657 {
+  overflow: visible;
+  position: absolute;
+  top: 209.436px;
+  left: 376.566px;
+  width: 236.041px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 763, ../sass/screen.scss */
+.Path_658 {
+  overflow: visible;
+  position: absolute;
+  top: 229.166px;
+  left: 300.157px;
+  width: 151.382px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 772, ../sass/screen.scss */
+.Path_659 {
+  overflow: visible;
+  position: absolute;
+  top: 229.524px;
+  left: 461.225px;
+  width: 151.382px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 781, ../sass/screen.scss */
+.Path_660 {
+  overflow: visible;
+  position: absolute;
+  top: 248.895px;
+  left: 300.516px;
+  width: 151.382px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 790, ../sass/screen.scss */
+.Path_661 {
+  overflow: visible;
+  position: absolute;
+  top: 268.625px;
+  left: 300.875px;
+  width: 151.381px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 799, ../sass/screen.scss */
+.Path_662 {
+  overflow: visible;
+  position: absolute;
+  top: 190.064px;
+  left: 473.421px;
+  width: 45.917px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 808, ../sass/screen.scss */
+.Path_663 {
+  overflow: visible;
+  position: absolute;
+  top: 248.895px;
+  left: 473.421px;
+  width: 45.917px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 817, ../sass/screen.scss */
+.Path_664 {
+  overflow: visible;
+  position: absolute;
+  top: 268.267px;
+  left: 473.422px;
+  width: 45.917px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 826, ../sass/screen.scss */
+.Path_665 {
+  overflow: visible;
+  position: absolute;
+  top: 268.267px;
+  left: 544.449px;
+  width: 45.917px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 835, ../sass/screen.scss */
+.Path_666 {
+  overflow: visible;
+  position: absolute;
+  top: 209.436px;
+  left: 299.081px;
+  width: 45.917px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 844, ../sass/screen.scss */
+.Path_667 {
+  overflow: visible;
+  position: absolute;
+  top: 480.273px;
+  left: 299.62px;
+  width: 151.381px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 853, ../sass/screen.scss */
+.Path_668 {
+  overflow: visible;
+  position: absolute;
+  top: 519.733px;
+  left: 298.902px;
+  width: 151.382px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 862, ../sass/screen.scss */
+.Path_669 {
+  overflow: visible;
+  position: absolute;
+  top: 539.463px;
+  left: 299.26px;
+  width: 151.382px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 871, ../sass/screen.scss */
+.Path_670 {
+  overflow: visible;
+  position: absolute;
+  top: 520.091px;
+  left: 467.862px;
+  width: 45.917px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 880, ../sass/screen.scss */
+.Path_671 {
+  overflow: visible;
+  position: absolute;
+  top: 539.463px;
+  left: 467.862px;
+  width: 45.917px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 889, ../sass/screen.scss */
+.Path_672 {
+  overflow: visible;
+  position: absolute;
+  top: 520.091px;
+  left: 538.889px;
+  width: 45.917px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 898, ../sass/screen.scss */
+.Path_673 {
+  overflow: visible;
+  position: absolute;
+  top: 500.003px;
+  left: 376.745px;
+  width: 236.041px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 907, ../sass/screen.scss */
+.Path_674 {
+  overflow: visible;
+  position: absolute;
+  top: 500.003px;
+  left: 299.26px;
+  width: 45.917px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 916, ../sass/screen.scss */
+.Path_675 {
+  overflow: visible;
+  position: absolute;
+  top: 559.552px;
+  left: 376.745px;
+  width: 236.041px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 925, ../sass/screen.scss */
+.Path_676 {
+  overflow: visible;
+  position: absolute;
+  top: 559.552px;
+  left: 299.26px;
+  width: 45.917px;
+  height: 3.587px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 934, ../sass/screen.scss */
+.Path_677 {
+  overflow: visible;
+  position: absolute;
+  top: 319.564px;
+  left: 356.119px;
+  width: 70.669px;
+  height: 113.357px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 943, ../sass/screen.scss */
+.Path_678 {
+  overflow: visible;
+  position: absolute;
+  top: 319.564px;
+  left: 484.901px;
+  width: 70.669px;
+  height: 113.357px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 952, ../sass/screen.scss */
+.Ellipse_86 {
+  position: absolute;
+  overflow: visible;
+  width: 14.34px;
+  height: 14.34px;
+  left: 165.063px;
+  top: 133.839px;
+}
+
+/* line 960, ../sass/screen.scss */
+.Ellipse_87 {
+  position: absolute;
+  overflow: visible;
+  width: 14.34px;
+  height: 14.34px;
+  left: 184.183px;
+  top: 133.839px;
+}
+
+/* line 968, ../sass/screen.scss */
+.Ellipse_88 {
+  position: absolute;
+  overflow: visible;
+  width: 14.34px;
+  height: 14.34px;
+  left: 203.303px;
+  top: 133.839px;
+}
+
+/* line 976, ../sass/screen.scss */
+#Rectangle_97 {
+  opacity: 0.1;
+}
+
+/* line 979, ../sass/screen.scss */
+.Rectangle_97 {
+  position: absolute;
+  overflow: visible;
+  width: 599.089px;
+  height: 2.39px;
+  left: 156.3px;
+  top: 152.959px;
+}
+
+/* line 987, ../sass/screen.scss */
+.Path_679 {
+  overflow: visible;
+  position: absolute;
+  top: 368.5px;
+  left: 762.28px;
+  width: 134.917px;
+  height: 183.978px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 996, ../sass/screen.scss */
+.Path_680 {
+  overflow: visible;
+  position: absolute;
+  top: 368.5px;
+  left: 800.166px;
+  width: 56.555px;
+  height: 230.313px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1005, ../sass/screen.scss */
+.Path_681 {
+  overflow: visible;
+  position: absolute;
+  top: 593.687px;
+  left: 74.534px;
+  width: 43.283px;
+  height: 71.629px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1014, ../sass/screen.scss */
+.Path_682 {
+  overflow: visible;
+  position: absolute;
+  top: 628.35px;
+  left: 165.911px;
+  width: 62.947px;
+  height: 43.148px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1023, ../sass/screen.scss */
+.Ellipse_89 {
+  position: absolute;
+  overflow: visible;
+  width: 46.167px;
+  height: 46.167px;
+  left: 170.482px;
+  top: 277.035px;
+}
+
+/* line 1031, ../sass/screen.scss */
+.Path_683 {
+  overflow: visible;
+  position: absolute;
+  top: 308.472px;
+  left: 165.63px;
+  width: 31.926px;
+  height: 26.325px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1040, ../sass/screen.scss */
+.Path_684 {
+  overflow: visible;
+  position: absolute;
+  top: 317.421px;
+  left: 136.445px;
+  width: 88.799px;
+  height: 169.742px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1049, ../sass/screen.scss */
+.Path_685 {
+  overflow: visible;
+  position: absolute;
+  top: 265.234px;
+  left: 155.378px;
+  width: 53.283px;
+  height: 51.294px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1058, ../sass/screen.scss */
+.Path_686 {
+  overflow: visible;
+  position: absolute;
+  top: 514.543px;
+  left: 162.943px;
+  width: 39.384px;
+  height: 121.016px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1067, ../sass/screen.scss */
+#Path_687 {
+  opacity: 0.1;
+}
+
+/* line 1070, ../sass/screen.scss */
+.Path_687 {
+  overflow: visible;
+  position: absolute;
+  top: 514.543px;
+  left: 162.943px;
+  width: 39.384px;
+  height: 121.016px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1079, ../sass/screen.scss */
+.Path_688 {
+  overflow: visible;
+  position: absolute;
+  top: 464.468px;
+  left: 105.888px;
+  width: 98.064px;
+  height: 150.971px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1088, ../sass/screen.scss */
+.Path_689 {
+  overflow: visible;
+  position: absolute;
+  top: 456.811px;
+  left: 130.808px;
+  width: 69.887px;
+  height: 21.014px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1097, ../sass/screen.scss */
+.Path_690 {
+  overflow: visible;
+  position: absolute;
+  top: 318.051px;
+  left: 129.516px;
+  width: 64.896px;
+  height: 35.628px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1106, ../sass/screen.scss */
+.Path_691 {
+  overflow: visible;
+  position: absolute;
+  top: 327.958px;
+  left: 122.993px;
+  width: 92.732px;
+  height: 156.042px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1115, ../sass/screen.scss */
+.Path_692 {
+  overflow: visible;
+  position: absolute;
+  top: 419.063px;
+  left: 158.896px;
+  width: 25.067px;
+  height: 90.878px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1124, ../sass/screen.scss */
+.Path_693 {
+  overflow: visible;
+  position: absolute;
+  top: 337.542px;
+  left: 151.071px;
+  width: 40.359px;
+  height: 88.059px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1133, ../sass/screen.scss */
+#undraw_website_setup_5hr2 {
+  position: absolute;
+  width: 440px;
+  height: 280px;
+  left: 188px;
+  top: 1213px;
+  overflow: visible;
+}
+
+/* line 1141, ../sass/screen.scss */
+#Path_694 {
+  opacity: 0.5;
+}
+
+/* line 1144, ../sass/screen.scss */
+.Path_694 {
+  overflow: visible;
+  position: absolute;
+  top: 173.556px;
+  left: 1.308px;
+  width: 412.305px;
+  height: 106.444px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1153, ../sass/screen.scss */
+.Path_695 {
+  overflow: visible;
+  position: absolute;
+  top: 174.157px;
+  left: 3.592px;
+  width: 407.748px;
+  height: 105.236px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1162, ../sass/screen.scss */
+#Path_696 {
+  opacity: 0.6;
+}
+
+/* line 1165, ../sass/screen.scss */
+.Path_696 {
+  overflow: visible;
+  position: absolute;
+  top: 99.497px;
+  left: 0.003px;
+  width: 57.618px;
+  height: 80.479px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1174, ../sass/screen.scss */
+#Path_697 {
+  opacity: 0.6;
+}
+
+/* line 1177, ../sass/screen.scss */
+.Path_697 {
+  overflow: visible;
+  position: absolute;
+  top: 100.358px;
+  left: 16.228px;
+  width: 29.797px;
+  height: 79.175px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1186, ../sass/screen.scss */
+#Path_698 {
+  opacity: 0.6;
+}
+
+/* line 1189, ../sass/screen.scss */
+.Path_698 {
+  overflow: visible;
+  position: absolute;
+  top: 119.924px;
+  left: 24.339px;
+  width: 27.512px;
+  height: 16.618px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1198, ../sass/screen.scss */
+#Path_699 {
+  opacity: 0.6;
+}
+
+/* line 1201, ../sass/screen.scss */
+.Path_699 {
+  overflow: visible;
+  position: absolute;
+  top: 135.082px;
+  left: 0px;
+  width: 27.122px;
+  height: 9.524px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1210, ../sass/screen.scss */
+#Path_700 {
+  opacity: 0.6;
+}
+
+/* line 1213, ../sass/screen.scss */
+.Path_700 {
+  overflow: visible;
+  position: absolute;
+  top: 148.047px;
+  left: 31.316px;
+  width: 26.478px;
+  height: 9.768px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1222, ../sass/screen.scss */
+#Path_701 {
+  opacity: 0.6;
+}
+
+/* line 1225, ../sass/screen.scss */
+.Path_701 {
+  overflow: visible;
+  position: absolute;
+  top: 163.394px;
+  left: 13.675px;
+  width: 20.844px;
+  height: 5.619px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1234, ../sass/screen.scss */
+#Path_702 {
+  opacity: 0.6;
+}
+
+/* line 1237, ../sass/screen.scss */
+.Path_702 {
+  overflow: visible;
+  position: absolute;
+  top: 44.409px;
+  left: 340.52px;
+  width: 92.325px;
+  height: 128.99px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1246, ../sass/screen.scss */
+#Path_703 {
+  opacity: 0.6;
+}
+
+/* line 1249, ../sass/screen.scss */
+.Path_703 {
+  overflow: visible;
+  position: absolute;
+  top: 45.757px;
+  left: 360.205px;
+  width: 47.331px;
+  height: 126.584px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1258, ../sass/screen.scss */
+#Path_704 {
+  opacity: 0.6;
+}
+
+/* line 1261, ../sass/screen.scss */
+.Path_704 {
+  overflow: visible;
+  position: absolute;
+  top: 76.916px;
+  left: 350.398px;
+  width: 43.842px;
+  height: 26.133px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1270, ../sass/screen.scss */
+#Path_705 {
+  opacity: 0.6;
+}
+
+/* line 1273, ../sass/screen.scss */
+.Path_705 {
+  overflow: visible;
+  position: absolute;
+  top: 101.188px;
+  left: 389.996px;
+  width: 43.23px;
+  height: 14.754px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1282, ../sass/screen.scss */
+#Path_706 {
+  opacity: 0.6;
+}
+
+/* line 1285, ../sass/screen.scss */
+.Path_706 {
+  overflow: visible;
+  position: absolute;
+  top: 121.971px;
+  left: 340.86px;
+  width: 42.197px;
+  height: 15.15px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1294, ../sass/screen.scss */
+#Path_707 {
+  opacity: 0.6;
+}
+
+/* line 1297, ../sass/screen.scss */
+.Path_707 {
+  overflow: visible;
+  position: absolute;
+  top: 146.556px;
+  left: 378.068px;
+  width: 33.2px;
+  height: 8.453px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1306, ../sass/screen.scss */
+.Path_708 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 34.679px;
+  width: 336.749px;
+  height: 229.401px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1315, ../sass/screen.scss */
+.Rectangle_98 {
+  position: absolute;
+  overflow: visible;
+  width: 328.189px;
+  height: 214.841px;
+  left: 39.673px;
+  top: 10.409px;
+}
+
+/* line 1323, ../sass/screen.scss */
+.Rectangle_99 {
+  position: absolute;
+  overflow: visible;
+  width: 328.189px;
+  height: 15.806px;
+  left: 39.673px;
+  top: 0.19px;
+}
+
+/* line 1331, ../sass/screen.scss */
+.Ellipse_91 {
+  position: absolute;
+  overflow: visible;
+  width: 7.662px;
+  height: 7.662px;
+  left: 48.331px;
+  top: 4.021px;
+}
+
+/* line 1339, ../sass/screen.scss */
+.Ellipse_92 {
+  position: absolute;
+  overflow: visible;
+  width: 7.662px;
+  height: 7.662px;
+  left: 58.87px;
+  top: 4.021px;
+}
+
+/* line 1347, ../sass/screen.scss */
+.Ellipse_93 {
+  position: absolute;
+  overflow: visible;
+  width: 7.662px;
+  height: 7.662px;
+  left: 69.409px;
+  top: 4.021px;
+}
+
+/* line 1355, ../sass/screen.scss */
+#Rectangle_100 {
+  opacity: 0.5;
+}
+
+/* line 1358, ../sass/screen.scss */
+.Rectangle_100 {
+  position: absolute;
+  overflow: visible;
+  width: 122.298px;
+  height: 5.096px;
+  left: 52.25px;
+  top: 41.313px;
+}
+
+/* line 1366, ../sass/screen.scss */
+#Rectangle_101 {
+  opacity: 0.5;
+}
+
+/* line 1369, ../sass/screen.scss */
+.Rectangle_101 {
+  position: absolute;
+  overflow: visible;
+  width: 122.298px;
+  height: 5.096px;
+  left: 52.25px;
+  top: 51.011px;
+}
+
+/* line 1377, ../sass/screen.scss */
+#Rectangle_102 {
+  opacity: 0.5;
+}
+
+/* line 1380, ../sass/screen.scss */
+.Rectangle_102 {
+  position: absolute;
+  overflow: visible;
+  width: 122.298px;
+  height: 5.096px;
+  left: 52.25px;
+  top: 61.104px;
+}
+
+/* line 1388, ../sass/screen.scss */
+#Rectangle_103 {
+  opacity: 0.5;
+}
+
+/* line 1391, ../sass/screen.scss */
+.Rectangle_103 {
+  position: absolute;
+  overflow: visible;
+  width: 80.142px;
+  height: 5.096px;
+  left: 94.171px;
+  top: 71.198px;
+}
+
+/* line 1399, ../sass/screen.scss */
+#Rectangle_104 {
+  opacity: 0.5;
+}
+
+/* line 1402, ../sass/screen.scss */
+.Rectangle_104 {
+  position: absolute;
+  overflow: visible;
+  width: 64.392px;
+  height: 5.096px;
+  left: 52.25px;
+  top: 81.292px;
+}
+
+/* line 1410, ../sass/screen.scss */
+#Rectangle_105 {
+  opacity: 0.5;
+}
+
+/* line 1413, ../sass/screen.scss */
+.Rectangle_105 {
+  position: absolute;
+  overflow: visible;
+  width: 49.568px;
+  height: 5.096px;
+  left: 86.794px;
+  top: 91.386px;
+}
+
+/* line 1421, ../sass/screen.scss */
+#Rectangle_106 {
+  opacity: 0.5;
+}
+
+/* line 1424, ../sass/screen.scss */
+.Rectangle_106 {
+  position: absolute;
+  overflow: visible;
+  width: 144.07px;
+  height: 82.921px;
+  left: 190.184px;
+  top: 75.958px;
+}
+
+/* line 1432, ../sass/screen.scss */
+.Rectangle_107 {
+  position: absolute;
+  overflow: visible;
+  width: 144.07px;
+  height: 82.922px;
+  left: 207.273px;
+  top: 83.728px;
+}
+
+/* line 1440, ../sass/screen.scss */
+#Path_709 {
+  opacity: 0.5;
+}
+
+/* line 1443, ../sass/screen.scss */
+.Path_709 {
+  overflow: visible;
+  position: absolute;
+  top: 71.579px;
+  left: 347.625px;
+  width: 92.375px;
+  height: 187.103px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1452, ../sass/screen.scss */
+.Path_710 {
+  overflow: visible;
+  position: absolute;
+  top: 91.76px;
+  left: 350.604px;
+  width: 52.563px;
+  height: 39.922px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1461, ../sass/screen.scss */
+#Group_53 {
+  opacity: 0.05;
+  position: absolute;
+  width: 52.563px;
+  height: 39.922px;
+  left: 350.604px;
+  top: 91.76px;
+  overflow: visible;
+}
+
+/* line 1470, ../sass/screen.scss */
+.Path_711 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 52.563px;
+  height: 39.922px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1479, ../sass/screen.scss */
+.Path_712 {
+  overflow: visible;
+  position: absolute;
+  top: 108.674px;
+  left: 387.212px;
+  width: 12.387px;
+  height: 14.542px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1488, ../sass/screen.scss */
+#Group_54 {
+  opacity: 0.05;
+  position: absolute;
+  width: 12.387px;
+  height: 14.542px;
+  left: 387.212px;
+  top: 108.674px;
+  overflow: visible;
+}
+
+/* line 1497, ../sass/screen.scss */
+.Path_713 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 12.387px;
+  height: 14.542px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1506, ../sass/screen.scss */
+.Path_714 {
+  overflow: visible;
+  position: absolute;
+  top: 97.061px;
+  left: 383.423px;
+  width: 23.014px;
+  height: 18.298px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1515, ../sass/screen.scss */
+.Path_715 {
+  overflow: visible;
+  position: absolute;
+  top: 171.49px;
+  left: 391.006px;
+  width: 31.367px;
+  height: 72.688px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1524, ../sass/screen.scss */
+#Group_55 {
+  opacity: 0.05;
+  position: absolute;
+  width: 31.367px;
+  height: 72.688px;
+  left: 391.006px;
+  top: 171.49px;
+  overflow: visible;
+}
+
+/* line 1533, ../sass/screen.scss */
+.Path_716 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 31.367px;
+  height: 72.688px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1542, ../sass/screen.scss */
+.Path_717 {
+  overflow: visible;
+  position: absolute;
+  top: 239.25px;
+  left: 384.354px;
+  width: 29.268px;
+  height: 13.606px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1551, ../sass/screen.scss */
+#Group_56 {
+  opacity: 0.1;
+  position: absolute;
+  width: 13.114px;
+  height: 15.431px;
+  left: 404.316px;
+  top: 162.056px;
+  overflow: visible;
+}
+
+/* line 1560, ../sass/screen.scss */
+.Path_718 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 13.114px;
+  height: 15.431px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1569, ../sass/screen.scss */
+.Path_719 {
+  overflow: visible;
+  position: absolute;
+  top: 161.799px;
+  left: 404.316px;
+  width: 13.114px;
+  height: 15.431px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1578, ../sass/screen.scss */
+#Group_57 {
+  opacity: 0.1;
+  position: absolute;
+  width: 13.114px;
+  height: 15.431px;
+  left: 404.316px;
+  top: 162.258px;
+  overflow: visible;
+}
+
+/* line 1587, ../sass/screen.scss */
+.Path_720 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 13.114px;
+  height: 15.431px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1596, ../sass/screen.scss */
+.Path_721 {
+  overflow: visible;
+  position: absolute;
+  top: 177.503px;
+  left: 380.041px;
+  width: 46.297px;
+  height: 72.211px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1605, ../sass/screen.scss */
+.Path_722 {
+  overflow: visible;
+  position: absolute;
+  top: 244.197px;
+  left: 364.346px;
+  width: 29.506px;
+  height: 12.441px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1614, ../sass/screen.scss */
+#Group_58 {
+  opacity: 0.1;
+  position: absolute;
+  width: 32.184px;
+  height: 30.732px;
+  left: 405.534px;
+  top: 157.818px;
+  overflow: visible;
+}
+
+/* line 1623, ../sass/screen.scss */
+.Path_723 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 32.184px;
+  height: 30.732px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1632, ../sass/screen.scss */
+.Path_724 {
+  overflow: visible;
+  position: absolute;
+  top: 157.561px;
+  left: 405.534px;
+  width: 32.184px;
+  height: 30.732px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1641, ../sass/screen.scss */
+#Group_59 {
+  opacity: 0.1;
+  position: absolute;
+  width: 46.723px;
+  height: 62.896px;
+  left: 389.223px;
+  top: 106.389px;
+  overflow: visible;
+}
+
+/* line 1650, ../sass/screen.scss */
+.Path_725 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 46.723px;
+  height: 62.896px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1659, ../sass/screen.scss */
+#Group_60 {
+  opacity: 0.1;
+  position: absolute;
+  width: 32.184px;
+  height: 30.732px;
+  left: 405.537px;
+  top: 157.561px;
+  overflow: visible;
+}
+
+/* line 1668, ../sass/screen.scss */
+.Path_726 {
+  overflow: visible;
+  position: absolute;
+  top: 20.999px;
+  left: 0px;
+  width: 16.248px;
+  height: 8.019px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1677, ../sass/screen.scss */
+.Path_727 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 17.392px;
+  width: 14.792px;
+  height: 30.732px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1686, ../sass/screen.scss */
+.Path_728 {
+  overflow: visible;
+  position: absolute;
+  top: 105.899px;
+  left: 389.149px;
+  width: 46.852px;
+  height: 62.858px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1695, ../sass/screen.scss */
+#Group_61 {
+  opacity: 0.1;
+  position: absolute;
+  width: 12.424px;
+  height: 10.085px;
+  left: 383.682px;
+  top: 97.343px;
+  overflow: visible;
+}
+
+/* line 1704, ../sass/screen.scss */
+.Path_729 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 12.424px;
+  height: 10.085px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1713, ../sass/screen.scss */
+.Ellipse_94 {
+  position: absolute;
+  overflow: visible;
+  width: 23.014px;
+  height: 23.014px;
+  left: 374.793px;
+  top: 84.356px;
+}
+
+/* line 1721, ../sass/screen.scss */
+#Group_62 {
+  opacity: 0.1;
+  position: absolute;
+  width: 43.337px;
+  height: 55.737px;
+  left: 389.172px;
+  top: 112.977px;
+  overflow: visible;
+}
+
+/* line 1730, ../sass/screen.scss */
+.Path_730 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 43.337px;
+  height: 55.737px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1739, ../sass/screen.scss */
+.Path_731 {
+  overflow: visible;
+  position: absolute;
+  top: 94.014px;
+  left: 349.951px;
+  width: 52.563px;
+  height: 39.922px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1748, ../sass/screen.scss */
+#Group_63 {
+  opacity: 0.1;
+  position: absolute;
+  width: 19.495px;
+  height: 17.296px;
+  left: 386.563px;
+  top: 111.649px;
+  overflow: visible;
+}
+
+/* line 1757, ../sass/screen.scss */
+.Path_732 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 19.495px;
+  height: 17.297px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1766, ../sass/screen.scss */
+.Path_733 {
+  overflow: visible;
+  position: absolute;
+  top: 111.649px;
+  left: 386.827px;
+  width: 19.495px;
+  height: 17.297px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1775, ../sass/screen.scss */
+#Group_64 {
+  opacity: 0.1;
+  position: absolute;
+  width: 46.834px;
+  height: 59.94px;
+  left: 389.167px;
+  top: 105.916px;
+  overflow: visible;
+}
+
+/* line 1784, ../sass/screen.scss */
+.Path_734 {
+  overflow: visible;
+  position: absolute;
+  top: 6.801px;
+  left: 0px;
+  width: 2.566px;
+  height: 1.385px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1793, ../sass/screen.scss */
+.Path_735 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 7.185px;
+  width: 39.649px;
+  height: 59.94px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1802, ../sass/screen.scss */
+#Path_736 {
+  opacity: 0.1;
+}
+
+/* line 1805, ../sass/screen.scss */
+.Path_736 {
+  overflow: visible;
+  position: absolute;
+  top: 111.794px;
+  left: 397.056px;
+  width: 8.75px;
+  height: 10.333px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1814, ../sass/screen.scss */
+#Group_65 {
+  opacity: 0.1;
+  position: absolute;
+  width: 52.42px;
+  height: 54.988px;
+  left: 370.135px;
+  top: 76.414px;
+  overflow: visible;
+}
+
+/* line 1823, ../sass/screen.scss */
+.Path_737 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 52.42px;
+  height: 54.988px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1832, ../sass/screen.scss */
+.Path_738 {
+  overflow: visible;
+  position: absolute;
+  top: 75.774px;
+  left: 370.46px;
+  width: 52.419px;
+  height: 54.982px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1841, ../sass/screen.scss */
+.Path_739 {
+  overflow: visible;
+  position: absolute;
+  top: 143.909px;
+  left: 207.384px;
+  width: 80.605px;
+  height: 22.385px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1850, ../sass/screen.scss */
+#Group_66 {
+  opacity: 0.1;
+  position: absolute;
+  width: 100.525px;
+  height: 22.385px;
+  left: 249.86px;
+  top: 143.909px;
+  overflow: visible;
+}
+
+/* line 1859, ../sass/screen.scss */
+.Path_740 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100.525px;
+  height: 22.385px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1868, ../sass/screen.scss */
+.Path_741 {
+  overflow: visible;
+  position: absolute;
+  top: 143.909px;
+  left: 250.784px;
+  width: 100.525px;
+  height: 22.385px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1877, ../sass/screen.scss */
+.Ellipse_95 {
+  position: absolute;
+  overflow: visible;
+  width: 14.824px;
+  height: 14.824px;
+  left: 216.709px;
+  top: 91.354px;
+}
+
+/* line 1885, ../sass/screen.scss */
+.Path_742 {
+  overflow: visible;
+  position: absolute;
+  top: 92.996px;
+  left: 279.371px;
+  width: 67.227px;
+  height: 2.039px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1894, ../sass/screen.scss */
+.Path_743 {
+  overflow: visible;
+  position: absolute;
+  top: 102.038px;
+  left: 297.404px;
+  width: 14.574px;
+  height: 0.421px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1903, ../sass/screen.scss */
+.Path_744 {
+  overflow: visible;
+  position: absolute;
+  top: 114.886px;
+  left: 266.431px;
+  width: 14.574px;
+  height: 0.422px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1912, ../sass/screen.scss */
+.Path_745 {
+  overflow: visible;
+  position: absolute;
+  top: 112.516px;
+  left: 247.114px;
+  width: 4.468px;
+  height: 49.855px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1921, ../sass/screen.scss */
+.Path_746 {
+  overflow: visible;
+  position: absolute;
+  top: 91.733px;
+  left: 236.972px;
+  width: 28.314px;
+  height: 30.468px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1930, ../sass/screen.scss */
+.Path_747 {
+  overflow: visible;
+  position: absolute;
+  top: 122.805px;
+  left: 292.917px;
+  width: 3.413px;
+  height: 38.088px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1939, ../sass/screen.scss */
+.Path_748 {
+  overflow: visible;
+  position: absolute;
+  top: 106.922px;
+  left: 282.444px;
+  width: 21.583px;
+  height: 23.278px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1948, ../sass/screen.scss */
+.Path_749 {
+  overflow: visible;
+  position: absolute;
+  top: 131.602px;
+  left: 324.947px;
+  width: 2.115px;
+  height: 23.589px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1957, ../sass/screen.scss */
+.Path_750 {
+  overflow: visible;
+  position: absolute;
+  top: 121.75px;
+  left: 318.453px;
+  width: 13.383px;
+  height: 14.426px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1966, ../sass/screen.scss */
+.Path_751 {
+  overflow: visible;
+  position: absolute;
+  top: 127.185px;
+  left: 255.881px;
+  width: 9.393px;
+  height: 25.573px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1975, ../sass/screen.scss */
+.Path_752 {
+  overflow: visible;
+  position: absolute;
+  top: 128.759px;
+  left: 259.786px;
+  width: 1.292px;
+  height: 2.728px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1984, ../sass/screen.scss */
+.Path_753 {
+  overflow: visible;
+  position: absolute;
+  top: 148.554px;
+  left: 256.072px;
+  width: 2.399px;
+  height: 3.292px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 1993, ../sass/screen.scss */
+.Path_754 {
+  overflow: visible;
+  position: absolute;
+  top: 148.917px;
+  left: 260.455px;
+  width: 2.399px;
+  height: 3.293px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2002, ../sass/screen.scss */
+.Path_755 {
+  overflow: visible;
+  position: absolute;
+  top: 137.575px;
+  left: 257.279px;
+  width: 6.85px;
+  height: 12.443px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2011, ../sass/screen.scss */
+#Group_67 {
+  opacity: 0.1;
+  position: absolute;
+  width: 5.755px;
+  height: 12.41px;
+  left: 258.413px;
+  top: 137.598px;
+  overflow: visible;
+}
+
+/* line 2020, ../sass/screen.scss */
+.Path_756 {
+  overflow: visible;
+  position: absolute;
+  top: 2.446px;
+  left: 0px;
+  width: 3.108px;
+  height: 9.571px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2029, ../sass/screen.scss */
+.Path_757 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 4.141px;
+  width: 1.614px;
+  height: 12.411px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2038, ../sass/screen.scss */
+.Path_758 {
+  overflow: visible;
+  position: absolute;
+  top: 134.539px;
+  left: 258.506px;
+  width: 1.186px;
+  height: 0.878px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2047, ../sass/screen.scss */
+#Path_759 {
+  opacity: 0.1;
+}
+
+/* line 2050, ../sass/screen.scss */
+.Path_759 {
+  overflow: visible;
+  position: absolute;
+  top: 134.539px;
+  left: 258.506px;
+  width: 1.186px;
+  height: 0.878px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2059, ../sass/screen.scss */
+.Path_760 {
+  overflow: visible;
+  position: absolute;
+  top: 134.972px;
+  left: 263.508px;
+  width: 1.58px;
+  height: 0.799px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2068, ../sass/screen.scss */
+#Path_761 {
+  opacity: 0.1;
+}
+
+/* line 2071, ../sass/screen.scss */
+.Path_761 {
+  overflow: visible;
+  position: absolute;
+  top: 134.972px;
+  left: 263.508px;
+  width: 1.58px;
+  height: 0.795px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2080, ../sass/screen.scss */
+.Ellipse_96 {
+  position: absolute;
+  overflow: visible;
+  width: 3.159px;
+  height: 3.159px;
+  left: 260.524px;
+  top: 127.957px;
+}
+
+/* line 2088, ../sass/screen.scss */
+.Path_762 {
+  overflow: visible;
+  position: absolute;
+  top: 129.778px;
+  left: 260.56px;
+  width: 2.84px;
+  height: 3.35px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2097, ../sass/screen.scss */
+#Path_763 {
+  opacity: 0.1;
+}
+
+/* line 2100, ../sass/screen.scss */
+.Path_763 {
+  overflow: visible;
+  position: absolute;
+  top: 134.412px;
+  left: 258.511px;
+  width: 1.292px;
+  height: 7.322px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2109, ../sass/screen.scss */
+.Path_764 {
+  overflow: visible;
+  position: absolute;
+  top: 134.412px;
+  left: 258.497px;
+  width: 1.292px;
+  height: 7.322px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2118, ../sass/screen.scss */
+#Path_765 {
+  opacity: 0.1;
+}
+
+/* line 2121, ../sass/screen.scss */
+.Path_765 {
+  overflow: visible;
+  position: absolute;
+  top: 134.552px;
+  left: 262.987px;
+  width: 1.791px;
+  height: 7.663px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2130, ../sass/screen.scss */
+.Path_766 {
+  overflow: visible;
+  position: absolute;
+  top: 134.552px;
+  left: 263.001px;
+  width: 1.791px;
+  height: 7.663px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2139, ../sass/screen.scss */
+#Path_767 {
+  opacity: 0.1;
+}
+
+/* line 2142, ../sass/screen.scss */
+.Path_767 {
+  overflow: visible;
+  position: absolute;
+  top: 131.717px;
+  left: 258.453px;
+  width: 6.648px;
+  height: 6.785px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2151, ../sass/screen.scss */
+#Path_768 {
+  opacity: 0.1;
+}
+
+/* line 2154, ../sass/screen.scss */
+.Path_768 {
+  overflow: visible;
+  position: absolute;
+  top: 131.662px;
+  left: 258.453px;
+  width: 6.643px;
+  height: 6.785px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2163, ../sass/screen.scss */
+.Path_769 {
+  overflow: visible;
+  position: absolute;
+  top: 131.685px;
+  left: 258.449px;
+  width: 6.648px;
+  height: 6.785px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2172, ../sass/screen.scss */
+#Path_770 {
+  opacity: 0.1;
+}
+
+/* line 2175, ../sass/screen.scss */
+.Path_770 {
+  overflow: visible;
+  position: absolute;
+  top: 129.869px;
+  left: 261.044px;
+  width: 1.445px;
+  height: 1.404px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2184, ../sass/screen.scss */
+.Ellipse_97 {
+  position: absolute;
+  overflow: visible;
+  width: 2.622px;
+  height: 2.622px;
+  left: 260.27px;
+  top: 128.556px;
+}
+
+/* line 2192, ../sass/screen.scss */
+.Ellipse_98 {
+  position: absolute;
+  overflow: visible;
+  width: 1.149px;
+  height: 1.149px;
+  left: 262.935px;
+  top: 127.728px;
+}
+
+/* line 2200, ../sass/screen.scss */
+.Path_771 {
+  overflow: visible;
+  position: absolute;
+  top: 128.372px;
+  left: 263.046px;
+  width: 1.149px;
+  height: 0.616px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2209, ../sass/screen.scss */
+.Path_772 {
+  overflow: visible;
+  position: absolute;
+  top: 128.817px;
+  left: 262.819px;
+  width: 1.14px;
+  height: 0.716px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2218, ../sass/screen.scss */
+.Path_773 {
+  overflow: visible;
+  position: absolute;
+  top: 130.193px;
+  left: 262.375px;
+  width: 1.14px;
+  height: 0.716px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2227, ../sass/screen.scss */
+.Path_774 {
+  overflow: visible;
+  position: absolute;
+  top: 128.065px;
+  left: 263.046px;
+  width: 1.149px;
+  height: 0.616px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2236, ../sass/screen.scss */
+.Path_775 {
+  overflow: visible;
+  position: absolute;
+  top: 127.723px;
+  left: 262.746px;
+  width: 0.616px;
+  height: 1.149px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2245, ../sass/screen.scss */
+#Path_776 {
+  opacity: 0.1;
+}
+
+/* line 2248, ../sass/screen.scss */
+.Path_776 {
+  overflow: visible;
+  position: absolute;
+  top: 133.653px;
+  left: 263.374px;
+  width: 0.071px;
+  height: 1.742px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2257, ../sass/screen.scss */
+#Path_777 {
+  opacity: 0.1;
+}
+
+/* line 2260, ../sass/screen.scss */
+.Path_777 {
+  overflow: visible;
+  position: absolute;
+  top: 133.828px;
+  left: 259.5px;
+  width: 0.071px;
+  height: 1.742px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2269, ../sass/screen.scss */
+#Path_778 {
+  opacity: 0.1;
+}
+
+/* line 2272, ../sass/screen.scss */
+.Path_778 {
+  overflow: visible;
+  position: absolute;
+  top: 136.853px;
+  left: 259.491px;
+  width: 0.848px;
+  height: 0.068px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2281, ../sass/screen.scss */
+#Path_779 {
+  opacity: 0.1;
+}
+
+/* line 2284, ../sass/screen.scss */
+.Path_779 {
+  overflow: visible;
+  position: absolute;
+  top: 135.56px;
+  left: 259.682px;
+  width: 3.419px;
+  height: 0.215px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2293, ../sass/screen.scss */
+.Rectangle_108 {
+  position: absolute;
+  overflow: visible;
+  width: 1.005px;
+  height: 0.621px;
+  left: 258.502px;
+  top: 142.584px;
+}
+
+/* line 2301, ../sass/screen.scss */
+.Path_780 {
+  overflow: visible;
+  position: absolute;
+  top: 142.729px;
+  left: 258.506px;
+  width: 1.001px;
+  height: 0.074px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2310, ../sass/screen.scss */
+.Path_781 {
+  overflow: visible;
+  position: absolute;
+  top: 140.177px;
+  left: 262.122px;
+  width: 1.001px;
+  height: 0.046px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2319, ../sass/screen.scss */
+.Path_782 {
+  overflow: visible;
+  position: absolute;
+  top: 140.288px;
+  left: 262.122px;
+  width: 1.001px;
+  height: 0.046px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2328, ../sass/screen.scss */
+.Path_783 {
+  overflow: visible;
+  position: absolute;
+  top: 140.402px;
+  left: 262.122px;
+  width: 1.001px;
+  height: 0.046px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2337, ../sass/screen.scss */
+.Path_784 {
+  overflow: visible;
+  position: absolute;
+  top: 140.512px;
+  left: 262.122px;
+  width: 1.001px;
+  height: 0.046px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2346, ../sass/screen.scss */
+.Path_785 {
+  overflow: visible;
+  position: absolute;
+  top: 143.178px;
+  left: 258.506px;
+  width: 1.001px;
+  height: 0.056px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2355, ../sass/screen.scss */
+.Path_786 {
+  overflow: visible;
+  position: absolute;
+  top: 143.124px;
+  left: 258.506px;
+  width: 1.001px;
+  height: 0.056px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2364, ../sass/screen.scss */
+.Path_787 {
+  overflow: visible;
+  position: absolute;
+  top: 143.068px;
+  left: 258.506px;
+  width: 1.001px;
+  height: 0.056px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2373, ../sass/screen.scss */
+.Path_788 {
+  overflow: visible;
+  position: absolute;
+  top: 143.013px;
+  left: 258.506px;
+  width: 1.001px;
+  height: 0.055px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2382, ../sass/screen.scss */
+.Path_789 {
+  overflow: visible;
+  position: absolute;
+  top: 142.646px;
+  left: 258.506px;
+  width: 1.001px;
+  height: 0.074px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2391, ../sass/screen.scss */
+.Path_790 {
+  overflow: visible;
+  position: absolute;
+  top: 142.55px;
+  left: 258.506px;
+  width: 1.001px;
+  height: 0.074px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2400, ../sass/screen.scss */
+#Path_791 {
+  opacity: 0.1;
+}
+
+/* line 2403, ../sass/screen.scss */
+.Path_791 {
+  overflow: visible;
+  position: absolute;
+  top: 128.427px;
+  left: 261.785px;
+  width: 1.021px;
+  height: 3.446px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2412, ../sass/screen.scss */
+.Path_792 {
+  overflow: visible;
+  position: absolute;
+  top: 128.414px;
+  left: 261.818px;
+  width: 1.021px;
+  height: 3.446px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2421, ../sass/screen.scss */
+#Path_793 {
+  opacity: 0.1;
+}
+
+/* line 2424, ../sass/screen.scss */
+.Path_793 {
+  overflow: visible;
+  position: absolute;
+  top: 128.122px;
+  left: 260.522px;
+  width: 2.753px;
+  height: 2.391px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2433, ../sass/screen.scss */
+.Path_794 {
+  overflow: visible;
+  position: absolute;
+  top: 128.104px;
+  left: 260.554px;
+  width: 2.753px;
+  height: 2.391px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2442, ../sass/screen.scss */
+.Path_795 {
+  overflow: visible;
+  position: absolute;
+  top: 140.177px;
+  left: 262.154px;
+  width: 1.001px;
+  height: 0.046px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2451, ../sass/screen.scss */
+.Path_796 {
+  overflow: visible;
+  position: absolute;
+  top: 140.288px;
+  left: 262.154px;
+  width: 1.001px;
+  height: 0.046px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2460, ../sass/screen.scss */
+.Path_797 {
+  overflow: visible;
+  position: absolute;
+  top: 140.402px;
+  left: 262.154px;
+  width: 1.001px;
+  height: 0.046px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2469, ../sass/screen.scss */
+.Path_798 {
+  overflow: visible;
+  position: absolute;
+  top: 140.512px;
+  left: 262.154px;
+  width: 1.001px;
+  height: 0.046px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2478, ../sass/screen.scss */
+.Path_799 {
+  overflow: visible;
+  position: absolute;
+  top: 146.602px;
+  left: 261.923px;
+  width: 1.001px;
+  height: 0.046px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2487, ../sass/screen.scss */
+.Path_800 {
+  overflow: visible;
+  position: absolute;
+  top: 146.716px;
+  left: 261.923px;
+  width: 1.001px;
+  height: 0.046px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2496, ../sass/screen.scss */
+.Path_801 {
+  overflow: visible;
+  position: absolute;
+  top: 146.827px;
+  left: 261.923px;
+  width: 1.001px;
+  height: 0.046px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2505, ../sass/screen.scss */
+.Path_802 {
+  overflow: visible;
+  position: absolute;
+  top: 146.937px;
+  left: 261.923px;
+  width: 1.001px;
+  height: 0.046px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2514, ../sass/screen.scss */
+#undraw_innovative_b409 {
+  position: absolute;
+  width: 384.47px;
+  height: 284.291px;
+  left: 767.765px;
+  top: 1213px;
+  overflow: visible;
+}
+
+/* line 2522, ../sass/screen.scss */
+.Ellipse_99 {
+  position: absolute;
+  overflow: visible;
+  width: 105.883px;
+  height: 105.883px;
+  left: 108.734px;
+  top: 58.295px;
+}
+
+/* line 2530, ../sass/screen.scss */
+.Path_803 {
+  overflow: visible;
+  position: absolute;
+  top: 48.522px;
+  left: 115.25px;
+  width: 106.698px;
+  height: 106.698px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2539, ../sass/screen.scss */
+.Path_804 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 330.274px;
+  height: 179.595px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2548, ../sass/screen.scss */
+.Rectangle_109 {
+  position: absolute;
+  overflow: visible;
+  width: 72.489px;
+  height: 7.33px;
+  left: 10.996px;
+  top: 14.253px;
+}
+
+/* line 2556, ../sass/screen.scss */
+.Rectangle_110 {
+  position: absolute;
+  overflow: visible;
+  width: 72.489px;
+  height: 7.33px;
+  left: 119.73px;
+  top: 14.253px;
+}
+
+/* line 2564, ../sass/screen.scss */
+.Rectangle_111 {
+  position: absolute;
+  overflow: visible;
+  width: 72.489px;
+  height: 7.33px;
+  left: 228.464px;
+  top: 14.253px;
+}
+
+/* line 2572, ../sass/screen.scss */
+.Path_805 {
+  overflow: visible;
+  position: absolute;
+  top: 10.181px;
+  left: 15.068px;
+  width: 73.304px;
+  height: 8.145px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2581, ../sass/screen.scss */
+.Path_806 {
+  overflow: visible;
+  position: absolute;
+  top: 10.181px;
+  left: 123.802px;
+  width: 73.304px;
+  height: 8.145px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2590, ../sass/screen.scss */
+.Path_807 {
+  overflow: visible;
+  position: absolute;
+  top: 10.181px;
+  left: 232.536px;
+  width: 73.304px;
+  height: 8.145px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2599, ../sass/screen.scss */
+.Rectangle_112 {
+  position: absolute;
+  overflow: visible;
+  width: 337.036px;
+  height: 1.04px;
+  left: 47.433px;
+  top: 278.041px;
+}
+
+/* line 2607, ../sass/screen.scss */
+.Path_808 {
+  overflow: visible;
+  position: absolute;
+  top: 147.219px;
+  left: 160.25px;
+  width: 32.579px;
+  height: 51.72px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2616, ../sass/screen.scss */
+.Path_809 {
+  overflow: visible;
+  position: absolute;
+  top: 195.037px;
+  left: 143.757px;
+  width: 23.025px;
+  height: 19.922px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2625, ../sass/screen.scss */
+.Ellipse_100 {
+  position: absolute;
+  overflow: visible;
+  width: 19.765px;
+  height: 19.764px;
+  left: 180.869px;
+  top: 70.253px;
+}
+
+/* line 2633, ../sass/screen.scss */
+.Path_810 {
+  overflow: visible;
+  position: absolute;
+  top: 82.183px;
+  left: 185.55px;
+  width: 16.124px;
+  height: 19.693px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2642, ../sass/screen.scss */
+.Path_811 {
+  overflow: visible;
+  position: absolute;
+  top: 131.627px;
+  left: 168.387px;
+  width: 10.402px;
+  height: 42.13px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2651, ../sass/screen.scss */
+.Path_812 {
+  overflow: visible;
+  position: absolute;
+  top: 129.546px;
+  left: 214.157px;
+  width: 8.842px;
+  height: 38.588px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2660, ../sass/screen.scss */
+.Path_813 {
+  overflow: visible;
+  position: absolute;
+  top: 173.042px;
+  left: 175.381px;
+  width: 51.6px;
+  height: 99.017px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2669, ../sass/screen.scss */
+.Path_814 {
+  overflow: visible;
+  position: absolute;
+  top: 267.378px;
+  left: 173.936px;
+  width: 22.368px;
+  height: 11.213px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2678, ../sass/screen.scss */
+.Path_815 {
+  overflow: visible;
+  position: absolute;
+  top: 263.363px;
+  left: 210.686px;
+  width: 23.814px;
+  height: 15.331px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2687, ../sass/screen.scss */
+.Path_816 {
+  overflow: visible;
+  position: absolute;
+  top: 97.184px;
+  left: 169.427px;
+  width: 52.012px;
+  height: 81.811px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2696, ../sass/screen.scss */
+.Path_817 {
+  overflow: visible;
+  position: absolute;
+  top: 107.182px;
+  left: 164.009px;
+  width: 13.866px;
+  height: 29.647px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2705, ../sass/screen.scss */
+.Path_818 {
+  overflow: visible;
+  position: absolute;
+  top: 104.581px;
+  left: 211.036px;
+  width: 17.044px;
+  height: 31.207px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2714, ../sass/screen.scss */
+.Path_819 {
+  overflow: visible;
+  position: absolute;
+  top: 67.84px;
+  left: 179.192px;
+  width: 21.506px;
+  height: 23.848px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 2723, ../sass/screen.scss */
+.Ellipse_101 {
+  position: absolute;
+  overflow: visible;
+  width: 28.507px;
+  height: 1.629px;
+  left: 135.612px;
+  top: 276.518px;
+}
+
+/* line 2731, ../sass/screen.scss */
+.Ellipse_102 {
+  position: absolute;
+  overflow: visible;
+  width: 28.507px;
+  height: 1.629px;
+  left: 132.354px;
+  top: 278.147px;
+}
+
+/* line 2739, ../sass/screen.scss */
+.Ellipse_103 {
+  position: absolute;
+  overflow: visible;
+  width: 15.475px;
+  height: 0.884px;
+  left: 124.616px;
+  top: 273.633px;
+}
+
+/* line 2747, ../sass/screen.scss */
+.Ellipse_104 {
+  position: absolute;
+  overflow: visible;
+  width: 15.475px;
+  height: 0.884px;
+  left: 152.309px;
+  top: 283.406px;
+}
+
+/* line 2755, ../sass/screen.scss */
+#undraw_maintenance_cn7j {
+  position: absolute;
+  width: 243.431px;
+  height: 279.701px;
+  left: 1390.569px;
+  top: 1213.85px;
+  overflow: visible;
+}
+
+/* line 2763, ../sass/screen.scss */
+.Rectangle_113 {
+  position: absolute;
+  overflow: visible;
+  width: 3.472px;
+  height: 2.316px;
+  left: 122.253px;
+  top: 102.645px;
+}
+
+/* line 2771, ../sass/screen.scss */
+.Rectangle_114 {
+  position: absolute;
+  overflow: visible;
+  width: 3.472px;
+  height: 2.316px;
+  left: 126.882px;
+  top: 102.645px;
+}
+
+/* line 2779, ../sass/screen.scss */
+.Rectangle_115 {
+  position: absolute;
+  overflow: visible;
+  width: 3.472px;
+  height: 2.316px;
+  left: 131.514px;
+  top: 102.645px;
+}
+
+/* line 2787, ../sass/screen.scss */
+.Rectangle_116 {
+  position: absolute;
+  overflow: visible;
+  width: 3.472px;
+  height: 2.316px;
+  left: 136.143px;
+  top: 102.645px;
+}
+
+/* line 2795, ../sass/screen.scss */
+.Rectangle_117 {
+  position: absolute;
+  overflow: visible;
+  width: 3.472px;
+  height: 2.316px;
+  left: 140.775px;
+  top: 102.645px;
+}
+
+/* line 2803, ../sass/screen.scss */
+.Rectangle_118 {
+  position: absolute;
+  overflow: visible;
+  width: 3.472px;
+  height: 2.316px;
+  left: 145.408px;
+  top: 102.645px;
+}
+
+/* line 2811, ../sass/screen.scss */
+.Rectangle_119 {
+  position: absolute;
+  overflow: visible;
+  width: 3.472px;
+  height: 2.316px;
+  left: 150.036px;
+  top: 102.645px;
+}
+
+/* line 2819, ../sass/screen.scss */
+.Rectangle_120 {
+  position: absolute;
+  overflow: visible;
+  width: 3.472px;
+  height: 2.316px;
+  left: 154.669px;
+  top: 102.645px;
+}
+
+/* line 2827, ../sass/screen.scss */
+.Rectangle_121 {
+  position: absolute;
+  overflow: visible;
+  width: 3.472px;
+  height: 2.316px;
+  left: 159.297px;
+  top: 102.645px;
+}
+
+/* line 2835, ../sass/screen.scss */
+.Rectangle_122 {
+  position: absolute;
+  overflow: visible;
+  width: 3.472px;
+  height: 2.316px;
+  left: 163.93px;
+  top: 102.645px;
+}
+
+/* line 2843, ../sass/screen.scss */
+.Rectangle_123 {
+  position: absolute;
+  overflow: visible;
+  width: 149.405px;
+  height: 166.752px;
+  left: 94.026px;
+  top: 104.253px;
+}
+
+/* line 2851, ../sass/screen.scss */
+.Rectangle_124 {
+  position: absolute;
+  overflow: visible;
+  width: 144.468px;
+  height: 51.789px;
+  left: 96.497px;
+  top: 215.586px;
+}
+
+/* line 2859, ../sass/screen.scss */
+.Rectangle_125 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 108.353px;
+  top: 227.872px;
+}
+
+/* line 2867, ../sass/screen.scss */
+#Group_68 {
+  opacity: 0.7;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 119.405px;
+  top: 227.872px;
+  overflow: visible;
+}
+
+/* line 2876, ../sass/screen.scss */
+.Rectangle_126 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 2884, ../sass/screen.scss */
+#Group_69 {
+  opacity: 0.6;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 130.457px;
+  top: 227.872px;
+  overflow: visible;
+}
+
+/* line 2893, ../sass/screen.scss */
+.Rectangle_127 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 2901, ../sass/screen.scss */
+#Group_70 {
+  opacity: 0.5;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 141.509px;
+  top: 227.872px;
+  overflow: visible;
+}
+
+/* line 2910, ../sass/screen.scss */
+.Rectangle_128 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 2918, ../sass/screen.scss */
+#Group_71 {
+  opacity: 0.5;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 152.562px;
+  top: 227.872px;
+  overflow: visible;
+}
+
+/* line 2927, ../sass/screen.scss */
+.Rectangle_129 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 2935, ../sass/screen.scss */
+#Group_72 {
+  opacity: 0.4;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 163.614px;
+  top: 227.872px;
+  overflow: visible;
+}
+
+/* line 2944, ../sass/screen.scss */
+.Rectangle_130 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 2952, ../sass/screen.scss */
+#Group_73 {
+  opacity: 0.3;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 174.662px;
+  top: 227.872px;
+  overflow: visible;
+}
+
+/* line 2961, ../sass/screen.scss */
+.Rectangle_131 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 2969, ../sass/screen.scss */
+.Ellipse_105 {
+  position: absolute;
+  overflow: visible;
+  width: 27.016px;
+  height: 27.016px;
+  left: 207px;
+  top: 227.46px;
+}
+
+/* line 2977, ../sass/screen.scss */
+.Rectangle_132 {
+  position: absolute;
+  overflow: visible;
+  width: 144.468px;
+  height: 51.789px;
+  left: 96.497px;
+  top: 161.782px;
+}
+
+/* line 2985, ../sass/screen.scss */
+.Rectangle_133 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 108.353px;
+  top: 174.068px;
+}
+
+/* line 2993, ../sass/screen.scss */
+#Group_74 {
+  opacity: 0.7;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 119.405px;
+  top: 174.068px;
+  overflow: visible;
+}
+
+/* line 3002, ../sass/screen.scss */
+.Rectangle_134 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 3010, ../sass/screen.scss */
+#Group_75 {
+  opacity: 0.6;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 130.457px;
+  top: 174.068px;
+  overflow: visible;
+}
+
+/* line 3019, ../sass/screen.scss */
+.Rectangle_135 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 3027, ../sass/screen.scss */
+#Group_76 {
+  opacity: 0.5;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 141.509px;
+  top: 174.068px;
+  overflow: visible;
+}
+
+/* line 3036, ../sass/screen.scss */
+.Rectangle_136 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 3044, ../sass/screen.scss */
+#Group_77 {
+  opacity: 0.5;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 152.562px;
+  top: 174.068px;
+  overflow: visible;
+}
+
+/* line 3053, ../sass/screen.scss */
+.Rectangle_137 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 3061, ../sass/screen.scss */
+#Group_78 {
+  opacity: 0.4;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 163.614px;
+  top: 174.068px;
+  overflow: visible;
+}
+
+/* line 3070, ../sass/screen.scss */
+.Rectangle_138 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 3078, ../sass/screen.scss */
+#Group_79 {
+  opacity: 0.3;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 174.662px;
+  top: 174.068px;
+  overflow: visible;
+}
+
+/* line 3087, ../sass/screen.scss */
+.Rectangle_139 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 3095, ../sass/screen.scss */
+.Ellipse_106 {
+  position: absolute;
+  overflow: visible;
+  width: 27.016px;
+  height: 27.016px;
+  left: 207px;
+  top: 173.66px;
+}
+
+/* line 3103, ../sass/screen.scss */
+.Rectangle_140 {
+  position: absolute;
+  overflow: visible;
+  width: 144.468px;
+  height: 51.789px;
+  left: 96.497px;
+  top: 107.982px;
+}
+
+/* line 3111, ../sass/screen.scss */
+.Rectangle_141 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 108.353px;
+  top: 120.264px;
+}
+
+/* line 3119, ../sass/screen.scss */
+#Group_80 {
+  opacity: 0.7;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 119.405px;
+  top: 120.264px;
+  overflow: visible;
+}
+
+/* line 3128, ../sass/screen.scss */
+.Rectangle_142 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 3136, ../sass/screen.scss */
+#Group_81 {
+  opacity: 0.6;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 130.457px;
+  top: 120.264px;
+  overflow: visible;
+}
+
+/* line 3145, ../sass/screen.scss */
+.Rectangle_143 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 3153, ../sass/screen.scss */
+#Group_82 {
+  opacity: 0.5;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 141.509px;
+  top: 120.264px;
+  overflow: visible;
+}
+
+/* line 3162, ../sass/screen.scss */
+.Rectangle_144 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 3170, ../sass/screen.scss */
+#Group_83 {
+  opacity: 0.5;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 152.562px;
+  top: 120.264px;
+  overflow: visible;
+}
+
+/* line 3179, ../sass/screen.scss */
+.Rectangle_145 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 3187, ../sass/screen.scss */
+#Group_84 {
+  opacity: 0.4;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 163.614px;
+  top: 120.264px;
+  overflow: visible;
+}
+
+/* line 3196, ../sass/screen.scss */
+.Rectangle_146 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 3204, ../sass/screen.scss */
+#Group_85 {
+  opacity: 0.3;
+  position: absolute;
+  width: 5.598px;
+  height: 26.535px;
+  left: 174.662px;
+  top: 120.264px;
+  overflow: visible;
+}
+
+/* line 3213, ../sass/screen.scss */
+.Rectangle_147 {
+  position: absolute;
+  overflow: visible;
+  width: 5.598px;
+  height: 26.535px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 3221, ../sass/screen.scss */
+.Ellipse_107 {
+  position: absolute;
+  overflow: visible;
+  width: 29.123px;
+  height: 29.123px;
+  left: 205.947px;
+  top: 118.803px;
+}
+
+/* line 3229, ../sass/screen.scss */
+.Ellipse_108 {
+  position: absolute;
+  overflow: visible;
+  width: 29.123px;
+  height: 29.123px;
+  left: 205.947px;
+  top: 172.967px;
+}
+
+/* line 3237, ../sass/screen.scss */
+.Ellipse_109 {
+  position: absolute;
+  overflow: visible;
+  width: 29.123px;
+  height: 29.123px;
+  left: 205.947px;
+  top: 226.767px;
+}
+
+/* line 3245, ../sass/screen.scss */
+.Ellipse_110 {
+  position: absolute;
+  overflow: visible;
+  width: 27.016px;
+  height: 27.016px;
+  left: 207px;
+  top: 119.856px;
+}
+
+/* line 3253, ../sass/screen.scss */
+.Path_820 {
+  overflow: visible;
+  position: absolute;
+  top: 103.787px;
+  left: 117.999px;
+  width: 55.191px;
+  height: 6.578px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3262, ../sass/screen.scss */
+.Path_821 {
+  overflow: visible;
+  position: absolute;
+  top: 104.168px;
+  left: 118.964px;
+  width: 54.226px;
+  height: 5.421px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3271, ../sass/screen.scss */
+.Path_822 {
+  overflow: visible;
+  position: absolute;
+  top: 60.808px;
+  left: 34.567px;
+  width: 85.979px;
+  height: 47.879px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3280, ../sass/screen.scss */
+.Path_823 {
+  overflow: visible;
+  position: absolute;
+  top: 88.763px;
+  left: 117.056px;
+  width: 19.624px;
+  height: 10.467px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3289, ../sass/screen.scss */
+.Ellipse_111 {
+  position: absolute;
+  overflow: visible;
+  width: 39.731px;
+  height: 39.731px;
+  left: 12.304px;
+  top: 12.642px;
+}
+
+/* line 3297, ../sass/screen.scss */
+.Path_824 {
+  overflow: visible;
+  position: absolute;
+  top: 52.38px;
+  left: 0px;
+  width: 58.105px;
+  height: 102.707px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3306, ../sass/screen.scss */
+.Path_825 {
+  overflow: visible;
+  position: absolute;
+  top: 153.898px;
+  left: 0.007px;
+  width: 85.445px;
+  height: 106.253px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3315, ../sass/screen.scss */
+.Path_826 {
+  overflow: visible;
+  position: absolute;
+  top: 260.151px;
+  left: 66.537px;
+  width: 36.372px;
+  height: 19.546px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3324, ../sass/screen.scss */
+.Path_827 {
+  overflow: visible;
+  position: absolute;
+  top: 260.151px;
+  left: 10.729px;
+  width: 36.372px;
+  height: 19.546px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3333, ../sass/screen.scss */
+#Group_86 {
+  opacity: 0.2;
+  position: absolute;
+  width: 29.652px;
+  height: 38.094px;
+  left: 22.699px;
+  top: 12.319px;
+  overflow: visible;
+}
+
+/* line 3342, ../sass/screen.scss */
+.Path_828 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 29.652px;
+  height: 38.094px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3351, ../sass/screen.scss */
+.Path_829 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 4.629px;
+  width: 51.689px;
+  height: 47.421px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3360, ../sass/screen.scss */
+#Group_87 {
+  opacity: 0.2;
+  position: absolute;
+  width: 43.945px;
+  height: 47.422px;
+  left: 12.374px;
+  top: 0px;
+  overflow: visible;
+}
+
+/* line 3369, ../sass/screen.scss */
+.Path_830 {
+  overflow: visible;
+  position: absolute;
+  top: 5.833px;
+  left: 9.268px;
+  width: 20.541px;
+  height: 8.479px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3378, ../sass/screen.scss */
+.Path_831 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 43.945px;
+  height: 47.422px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3387, ../sass/screen.scss */
+#Group_88 {
+  opacity: 0.2;
+  position: absolute;
+  width: 21.26px;
+  height: 102.714px;
+  left: 36.857px;
+  top: 52.383px;
+  overflow: visible;
+}
+
+/* line 3396, ../sass/screen.scss */
+.Path_832 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 21.26px;
+  height: 102.714px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3405, ../sass/screen.scss */
+.Path_833 {
+  overflow: visible;
+  position: absolute;
+  top: 67.558px;
+  left: 23.454px;
+  width: 85.985px;
+  height: 47.872px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3414, ../sass/screen.scss */
+.Path_834 {
+  overflow: visible;
+  position: absolute;
+  top: 95.51px;
+  left: 105.938px;
+  width: 19.634px;
+  height: 10.467px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3423, ../sass/screen.scss */
+.Rectangle_148 {
+  position: absolute;
+  overflow: visible;
+  width: 17.024px;
+  height: 17.024px;
+  left: 23.653px;
+  top: 43.86px;
+}
+
+/* line 3431, ../sass/screen.scss */
+#Group_89 {
+  opacity: 0.2;
+  position: absolute;
+  width: 58.961px;
+  height: 106.253px;
+  left: 26.491px;
+  top: 153.898px;
+  overflow: visible;
+}
+
+/* line 3440, ../sass/screen.scss */
+.Path_835 {
+  overflow: visible;
+  position: absolute;
+  top: 23.962px;
+  left: 0px;
+  width: 17.751px;
+  height: 82.291px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3449, ../sass/screen.scss */
+.Path_836 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 27.764px;
+  width: 31.197px;
+  height: 106.253px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3458, ../sass/screen.scss */
+#Group_90 {
+  opacity: 0.2;
+  position: absolute;
+  width: 19.026px;
+  height: 19.546px;
+  left: 83.877px;
+  top: 260.155px;
+  overflow: visible;
+}
+
+/* line 3467, ../sass/screen.scss */
+.Path_837 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 19.026px;
+  height: 19.546px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3476, ../sass/screen.scss */
+#Group_91 {
+  opacity: 0.2;
+  position: absolute;
+  width: 19.02px;
+  height: 19.546px;
+  left: 29.651px;
+  top: 260.155px;
+  overflow: visible;
+}
+
+/* line 3485, ../sass/screen.scss */
+.Path_838 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 19.02px;
+  height: 19.546px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3494, ../sass/screen.scss */
+#Group_92 {
+  opacity: 0.2;
+  position: absolute;
+  width: 32.845px;
+  height: 3.803px;
+  left: 78.819px;
+  top: 95.568px;
+  overflow: visible;
+}
+
+/* line 3503, ../sass/screen.scss */
+.Path_839 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 32.845px;
+  height: 3.803px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3512, ../sass/screen.scss */
+.Path_840 {
+  overflow: visible;
+  position: absolute;
+  top: 60.73px;
+  left: 15.853px;
+  width: 28.568px;
+  height: 32.536px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3521, ../sass/screen.scss */
+.Path_841 {
+  overflow: visible;
+  position: absolute;
+  top: 62.969px;
+  left: 35.491px;
+  width: 83.605px;
+  height: 46.573px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3530, ../sass/screen.scss */
+.Path_842 {
+  overflow: visible;
+  position: absolute;
+  top: 90.164px;
+  left: 115.723px;
+  width: 19.084px;
+  height: 10.178px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3539, ../sass/screen.scss */
+.Ellipse_112 {
+  position: absolute;
+  overflow: visible;
+  width: 38.637px;
+  height: 38.637px;
+  left: 13.842px;
+  top: 16.132px;
+}
+
+/* line 3547, ../sass/screen.scss */
+.Path_843 {
+  overflow: visible;
+  position: absolute;
+  top: 54.78px;
+  left: 1.879px;
+  width: 56.516px;
+  height: 99.894px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3556, ../sass/screen.scss */
+.Path_844 {
+  overflow: visible;
+  position: absolute;
+  top: 153.512px;
+  left: 1.879px;
+  width: 83.103px;
+  height: 103.343px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3565, ../sass/screen.scss */
+.Path_845 {
+  overflow: visible;
+  position: absolute;
+  top: 256.855px;
+  left: 66.585px;
+  width: 35.37px;
+  height: 19.014px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3574, ../sass/screen.scss */
+.Path_846 {
+  overflow: visible;
+  position: absolute;
+  top: 256.855px;
+  left: 12.308px;
+  width: 35.351px;
+  height: 19.014px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3583, ../sass/screen.scss */
+#Path_847 {
+  opacity: 0.2;
+}
+
+/* line 3586, ../sass/screen.scss */
+.Path_847 {
+  overflow: visible;
+  position: absolute;
+  top: 15.809px;
+  left: 23.951px;
+  width: 28.83px;
+  height: 37.047px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3595, ../sass/screen.scss */
+.Path_848 {
+  overflow: visible;
+  position: absolute;
+  top: 3.832px;
+  left: 6.381px;
+  width: 50.264px;
+  height: 46.121px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3604, ../sass/screen.scss */
+#Group_93 {
+  opacity: 0.2;
+  position: absolute;
+  width: 42.755px;
+  height: 46.123px;
+  left: 13.89px;
+  top: 3.832px;
+  overflow: visible;
+}
+
+/* line 3613, ../sass/screen.scss */
+.Path_849 {
+  overflow: visible;
+  position: absolute;
+  top: 5.678px;
+  left: 9.063px;
+  width: 19.957px;
+  height: 8.249px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3622, ../sass/screen.scss */
+.Path_850 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 42.755px;
+  height: 46.123px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3631, ../sass/screen.scss */
+#Path_851 {
+  opacity: 0.2;
+}
+
+/* line 3634, ../sass/screen.scss */
+.Path_851 {
+  overflow: visible;
+  position: absolute;
+  top: 54.777px;
+  left: 37.719px;
+  width: 20.681px;
+  height: 99.906px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3643, ../sass/screen.scss */
+.Path_852 {
+  overflow: visible;
+  position: absolute;
+  top: 69.528px;
+  left: 24.678px;
+  width: 83.612px;
+  height: 46.573px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3652, ../sass/screen.scss */
+.Path_853 {
+  overflow: visible;
+  position: absolute;
+  top: 96.723px;
+  left: 104.917px;
+  width: 19.084px;
+  height: 10.178px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3661, ../sass/screen.scss */
+.Rectangle_149 {
+  position: absolute;
+  overflow: visible;
+  width: 16.558px;
+  height: 16.558px;
+  left: 24.879px;
+  top: 46.488px;
+}
+
+/* line 3669, ../sass/screen.scss */
+#Group_94 {
+  opacity: 0.2;
+  position: absolute;
+  width: 57.342px;
+  height: 103.342px;
+  left: 27.64px;
+  top: 153.512px;
+  overflow: visible;
+}
+
+/* line 3678, ../sass/screen.scss */
+.Path_854 {
+  overflow: visible;
+  position: absolute;
+  top: 23.305px;
+  left: 0px;
+  width: 17.263px;
+  height: 80.038px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3687, ../sass/screen.scss */
+.Path_855 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 27.001px;
+  width: 30.341px;
+  height: 103.343px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3696, ../sass/screen.scss */
+#Path_856 {
+  opacity: 0.2;
+}
+
+/* line 3699, ../sass/screen.scss */
+.Path_856 {
+  overflow: visible;
+  position: absolute;
+  top: 256.858px;
+  left: 83.451px;
+  width: 18.503px;
+  height: 19.014px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3708, ../sass/screen.scss */
+#Path_857 {
+  opacity: 0.2;
+}
+
+/* line 3711, ../sass/screen.scss */
+.Path_857 {
+  overflow: visible;
+  position: absolute;
+  top: 256.858px;
+  left: 30.69px;
+  width: 18.505px;
+  height: 19.014px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3720, ../sass/screen.scss */
+#Path_858 {
+  opacity: 0.2;
+}
+
+/* line 3723, ../sass/screen.scss */
+.Path_858 {
+  overflow: visible;
+  position: absolute;
+  top: 96.783px;
+  left: 78.533px;
+  width: 31.942px;
+  height: 3.697px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3732, ../sass/screen.scss */
+.Path_859 {
+  overflow: visible;
+  position: absolute;
+  top: 62.9px;
+  left: 17.292px;
+  width: 27.783px;
+  height: 31.641px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3741, ../sass/screen.scss */
+.Path_860 {
+  overflow: visible;
+  position: absolute;
+  top: 61.072px;
+  left: 169.527px;
+  width: 36.353px;
+  height: 46.936px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3750, ../sass/screen.scss */
+.Path_861 {
+  overflow: visible;
+  position: absolute;
+  top: 62.243px;
+  left: 170.155px;
+  width: 34.5px;
+  height: 45.251px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3759, ../sass/screen.scss */
+#undraw_Search_1px8 {
+  position: absolute;
+  width: 749.14px;
+  height: 512.596px;
+  left: 153.86px;
+  top: 2627px;
+  overflow: visible;
+}
+
+/* line 3767, ../sass/screen.scss */
+.Rectangle_150 {
+  position: absolute;
+  overflow: visible;
+  width: 749.14px;
+  height: 138.525px;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 3775, ../sass/screen.scss */
+.Rectangle_151 {
+  position: absolute;
+  overflow: visible;
+  width: 739.297px;
+  height: 126.627px;
+  left: 4.375px;
+  top: 5px;
+}
+
+/* line 3783, ../sass/screen.scss */
+.Rectangle_152 {
+  position: absolute;
+  overflow: visible;
+  width: 429.764px;
+  height: 75.363px;
+  left: 49.781px;
+  top: 30.385px;
+}
+
+/* line 3791, ../sass/screen.scss */
+.Path_862 {
+  overflow: visible;
+  position: absolute;
+  top: 22.975px;
+  left: 577.767px;
+  width: 101.251px;
+  height: 103.358px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3800, ../sass/screen.scss */
+.Path_863 {
+  overflow: visible;
+  position: absolute;
+  top: 54.863px;
+  left: 594.083px;
+  width: 4.805px;
+  height: 4.975px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3809, ../sass/screen.scss */
+.Path_864 {
+  overflow: visible;
+  position: absolute;
+  top: 38.915px;
+  left: 597.889px;
+  width: 42.89px;
+  height: 15.215px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3818, ../sass/screen.scss */
+.Path_865 {
+  overflow: visible;
+  position: absolute;
+  top: 18.6px;
+  left: 577.767px;
+  width: 101.251px;
+  height: 103.358px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3827, ../sass/screen.scss */
+.Path_866 {
+  overflow: visible;
+  position: absolute;
+  top: 50.488px;
+  left: 594.083px;
+  width: 4.805px;
+  height: 4.975px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3836, ../sass/screen.scss */
+.Path_867 {
+  overflow: visible;
+  position: absolute;
+  top: 34.541px;
+  left: 597.889px;
+  width: 42.89px;
+  height: 15.215px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3845, ../sass/screen.scss */
+.Rectangle_153 {
+  position: absolute;
+  overflow: visible;
+  width: 744.922px;
+  height: 50.692px;
+  left: 4.217px;
+  top: 206.723px;
+}
+
+/* line 3853, ../sass/screen.scss */
+.Rectangle_154 {
+  position: absolute;
+  overflow: visible;
+  width: 744.922px;
+  height: 50.692px;
+  left: 4.217px;
+  top: 291.783px;
+}
+
+/* line 3861, ../sass/screen.scss */
+.Rectangle_155 {
+  position: absolute;
+  overflow: visible;
+  width: 744.922px;
+  height: 50.692px;
+  left: 4.217px;
+  top: 376.843px;
+}
+
+/* line 3869, ../sass/screen.scss */
+.Rectangle_156 {
+  position: absolute;
+  overflow: visible;
+  width: 744.922px;
+  height: 50.692px;
+  left: 4.217px;
+  top: 461.903px;
+}
+
+/* line 3877, ../sass/screen.scss */
+#undraw_web_devices_ad58 {
+  position: absolute;
+  width: 812px;
+  height: 479.675px;
+  left: 920px;
+  top: 2017px;
+  overflow: visible;
+}
+
+/* line 3885, ../sass/screen.scss */
+#Path_868 {
+  opacity: 0.2;
+}
+
+/* line 3888, ../sass/screen.scss */
+.Path_868 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 415.859px;
+  height: 434.859px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3897, ../sass/screen.scss */
+.Ellipse_113 {
+  position: absolute;
+  overflow: visible;
+  width: 728.918px;
+  height: 195.193px;
+  left: 83.082px;
+  top: 284.482px;
+}
+
+/* line 3905, ../sass/screen.scss */
+.Path_869 {
+  overflow: visible;
+  position: absolute;
+  top: 146.458px;
+  left: 710.814px;
+  width: 68.942px;
+  height: 180.733px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3914, ../sass/screen.scss */
+.Path_870 {
+  overflow: visible;
+  position: absolute;
+  top: 146.458px;
+  left: 710.814px;
+  width: 47.176px;
+  height: 182.117px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3923, ../sass/screen.scss */
+.Path_871 {
+  overflow: visible;
+  position: absolute;
+  top: 259.7px;
+  left: 703.658px;
+  width: 96.585px;
+  height: 75.585px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3932, ../sass/screen.scss */
+#Path_872 {
+  opacity: 0.2;
+}
+
+/* line 3935, ../sass/screen.scss */
+.Path_872 {
+  overflow: visible;
+  position: absolute;
+  top: 259.7px;
+  left: 703.658px;
+  width: 96.585px;
+  height: 75.585px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3944, ../sass/screen.scss */
+.Path_873 {
+  overflow: visible;
+  position: absolute;
+  top: 260.051px;
+  left: 703.658px;
+  width: 97.305px;
+  height: 66.118px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3953, ../sass/screen.scss */
+.Path_874 {
+  overflow: visible;
+  position: absolute;
+  top: 75.462px;
+  left: 199.113px;
+  width: 531.421px;
+  height: 286.646px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3962, ../sass/screen.scss */
+.Rectangle_157 {
+  position: absolute;
+  overflow: visible;
+  width: 413.931px;
+  height: 257.073px;
+  left: 258.735px;
+  top: 78.708px;
+}
+
+/* line 3970, ../sass/screen.scss */
+.Rectangle_158 {
+  position: absolute;
+  overflow: visible;
+  width: 395.63px;
+  height: 210.015px;
+  left: 267.443px;
+  top: 116.18px;
+}
+
+/* line 3978, ../sass/screen.scss */
+.Ellipse_114 {
+  position: absolute;
+  overflow: visible;
+  width: 6.976px;
+  height: 6.976px;
+  left: 461.774px;
+  top: 94.391px;
+}
+
+/* line 3986, ../sass/screen.scss */
+.Path_875 {
+  overflow: visible;
+  position: absolute;
+  top: 326.626px;
+  left: 205.141px;
+  width: 519.374px;
+  height: 32.245px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 3995, ../sass/screen.scss */
+.Path_876 {
+  overflow: visible;
+  position: absolute;
+  top: 123.563px;
+  left: 208.448px;
+  width: 197.505px;
+  height: 261.752px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4004, ../sass/screen.scss */
+.Rectangle_159 {
+  position: absolute;
+  overflow: visible;
+  width: 192.811px;
+  height: 256.297px;
+  left: 210.792px;
+  top: 126.698px;
+}
+
+/* line 4012, ../sass/screen.scss */
+.Rectangle_160 {
+  position: absolute;
+  overflow: visible;
+  width: 173.216px;
+  height: 207.812px;
+  left: 220.589px;
+  top: 150.941px;
+}
+
+/* line 4020, ../sass/screen.scss */
+.Ellipse_115 {
+  position: absolute;
+  overflow: visible;
+  width: 4.703px;
+  height: 4.703px;
+  left: 304.062px;
+  top: 136.104px;
+}
+
+/* line 4028, ../sass/screen.scss */
+.Ellipse_116 {
+  position: absolute;
+  overflow: visible;
+  width: 14.108px;
+  height: 14.108px;
+  left: 299.359px;
+  top: 363.401px;
+}
+
+/* line 4036, ../sass/screen.scss */
+.Path_877 {
+  overflow: visible;
+  position: absolute;
+  top: 201.941px;
+  left: 169.259px;
+  width: 102.668px;
+  height: 204.567px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4045, ../sass/screen.scss */
+.Rectangle_161 {
+  position: absolute;
+  overflow: visible;
+  width: 101.108px;
+  height: 202.216px;
+  left: 170.035px;
+  top: 203.509px;
+}
+
+/* line 4053, ../sass/screen.scss */
+.Rectangle_162 {
+  position: absolute;
+  overflow: visible;
+  width: 86.216px;
+  height: 164.594px;
+  left: 177.481px;
+  top: 222.32px;
+}
+
+/* line 4061, ../sass/screen.scss */
+.Ellipse_117 {
+  position: absolute;
+  overflow: visible;
+  width: 1.568px;
+  height: 1.567px;
+  left: 209.616px;
+  top: 212.131px;
+}
+
+/* line 4069, ../sass/screen.scss */
+.Rectangle_163 {
+  position: absolute;
+  overflow: visible;
+  width: 17.243px;
+  height: 1.567px;
+  left: 214.319px;
+  top: 212.131px;
+}
+
+/* line 4077, ../sass/screen.scss */
+.Ellipse_118 {
+  position: absolute;
+  overflow: visible;
+  width: 10.973px;
+  height: 10.973px;
+  left: 214.71px;
+  top: 389.266px;
+}
+
+/* line 4085, ../sass/screen.scss */
+.Path_878 {
+  overflow: visible;
+  position: absolute;
+  top: 307.689px;
+  left: 155.59px;
+  width: 13.68px;
+  height: 113.272px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4094, ../sass/screen.scss */
+.Path_879 {
+  overflow: visible;
+  position: absolute;
+  top: 283.439px;
+  left: 153.191px;
+  width: 15.676px;
+  height: 24.697px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4103, ../sass/screen.scss */
+.Path_880 {
+  overflow: visible;
+  position: absolute;
+  top: 302.836px;
+  left: 166.1px;
+  width: 17.198px;
+  height: 22.292px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4112, ../sass/screen.scss */
+.Path_881 {
+  overflow: visible;
+  position: absolute;
+  top: 341.479px;
+  left: 162.659px;
+  width: 22.596px;
+  height: 15.726px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4121, ../sass/screen.scss */
+.Path_882 {
+  overflow: visible;
+  position: absolute;
+  top: 373.118px;
+  left: 155.629px;
+  width: 21.092px;
+  height: 17.637px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4130, ../sass/screen.scss */
+.Path_883 {
+  overflow: visible;
+  position: absolute;
+  top: 312.265px;
+  left: 146.986px;
+  width: 20.196px;
+  height: 19.84px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4139, ../sass/screen.scss */
+.Path_884 {
+  overflow: visible;
+  position: absolute;
+  top: 347.206px;
+  left: 136.824px;
+  width: 23.194px;
+  height: 16.026px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4148, ../sass/screen.scss */
+.Path_885 {
+  overflow: visible;
+  position: absolute;
+  top: 384.562px;
+  left: 135.423px;
+  width: 21.092px;
+  height: 17.637px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4157, ../sass/screen.scss */
+.Path_886 {
+  overflow: visible;
+  position: absolute;
+  top: 189.289px;
+  left: 423.509px;
+  width: 356.356px;
+  height: 249.296px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4166, ../sass/screen.scss */
+.Path_887 {
+  overflow: visible;
+  position: absolute;
+  top: 302.835px;
+  left: 624.537px;
+  width: 38.153px;
+  height: 19.691px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4175, ../sass/screen.scss */
+#Path_888 {
+  opacity: 0.05;
+}
+
+/* line 4178, ../sass/screen.scss */
+.Path_888 {
+  overflow: visible;
+  position: absolute;
+  top: 302.835px;
+  left: 624.537px;
+  width: 38.153px;
+  height: 19.691px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4187, ../sass/screen.scss */
+.Path_889 {
+  overflow: visible;
+  position: absolute;
+  top: 249.143px;
+  left: 650.933px;
+  width: 70.541px;
+  height: 85.739px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4196, ../sass/screen.scss */
+#Path_890 {
+  opacity: 0.1;
+}
+
+/* line 4199, ../sass/screen.scss */
+.Path_890 {
+  overflow: visible;
+  position: absolute;
+  top: 249.143px;
+  left: 650.933px;
+  width: 70.541px;
+  height: 85.739px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4208, ../sass/screen.scss */
+.Path_891 {
+  overflow: visible;
+  position: absolute;
+  top: 222.877px;
+  left: 706.581px;
+  width: 37.722px;
+  height: 59.277px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4217, ../sass/screen.scss */
+.Path_892 {
+  overflow: visible;
+  position: absolute;
+  top: 251.398px;
+  left: 707.561px;
+  width: 18.223px;
+  height: 29.196px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4226, ../sass/screen.scss */
+.Path_893 {
+  overflow: visible;
+  position: absolute;
+  top: 390.716px;
+  left: 483.203px;
+  width: 24.297px;
+  height: 17.243px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4235, ../sass/screen.scss */
+#Path_894 {
+  opacity: 0.1;
+}
+
+/* line 4238, ../sass/screen.scss */
+.Path_894 {
+  overflow: visible;
+  position: absolute;
+  top: 388.231px;
+  left: 430.565px;
+  width: 65.219px;
+  height: 45.979px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4247, ../sass/screen.scss */
+.Path_895 {
+  overflow: visible;
+  position: absolute;
+  top: 388.231px;
+  left: 429.781px;
+  width: 65.219px;
+  height: 45.979px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4256, ../sass/screen.scss */
+.Path_896 {
+  overflow: visible;
+  position: absolute;
+  top: 349.959px;
+  left: 492.609px;
+  width: 192.027px;
+  height: 62.703px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4265, ../sass/screen.scss */
+#Path_897 {
+  opacity: 0.1;
+}
+
+/* line 4268, ../sass/screen.scss */
+.Path_897 {
+  overflow: visible;
+  position: absolute;
+  top: 349.959px;
+  left: 492.609px;
+  width: 192.027px;
+  height: 62.703px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4277, ../sass/screen.scss */
+.Path_898 {
+  overflow: visible;
+  position: absolute;
+  top: 381.311px;
+  left: 538.852px;
+  width: 21.162px;
+  height: 15.675px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4286, ../sass/screen.scss */
+.Path_899 {
+  overflow: visible;
+  position: absolute;
+  top: 303.94px;
+  left: 544.338px;
+  width: 179.693px;
+  height: 111.408px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4295, ../sass/screen.scss */
+.Path_900 {
+  overflow: visible;
+  position: absolute;
+  top: 252.77px;
+  left: 684.635px;
+  width: 64.97px;
+  height: 158.324px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4304, ../sass/screen.scss */
+#Path_901 {
+  opacity: 0.1;
+}
+
+/* line 4307, ../sass/screen.scss */
+.Path_901 {
+  overflow: visible;
+  position: absolute;
+  top: 253.843px;
+  left: 683.068px;
+  width: 30.258px;
+  height: 100.819px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4316, ../sass/screen.scss */
+.Path_902 {
+  overflow: visible;
+  position: absolute;
+  top: 253.453px;
+  left: 682.284px;
+  width: 30.644px;
+  height: 101.208px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4325, ../sass/screen.scss */
+.Path_903 {
+  overflow: visible;
+  position: absolute;
+  top: 306.63px;
+  left: 616.032px;
+  width: 78.792px;
+  height: 48.031px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4334, ../sass/screen.scss */
+#Path_904 {
+  opacity: 0.1;
+}
+
+/* line 4337, ../sass/screen.scss */
+.Path_904 {
+  overflow: visible;
+  position: absolute;
+  top: 390.128px;
+  left: 495.481px;
+  width: 66.618px;
+  height: 41.68px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4346, ../sass/screen.scss */
+.Path_905 {
+  overflow: visible;
+  position: absolute;
+  top: 390.888px;
+  left: 495.304px;
+  width: 66.545px;
+  height: 41.688px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4355, ../sass/screen.scss */
+#Ellipse_119 {
+  opacity: 0.1;
+}
+
+/* line 4358, ../sass/screen.scss */
+.Ellipse_119 {
+  position: absolute;
+  overflow: visible;
+  width: 50.162px;
+  height: 50.162px;
+  left: 687.379px;
+  top: 202.216px;
+}
+
+/* line 4366, ../sass/screen.scss */
+.Ellipse_120 {
+  position: absolute;
+  overflow: visible;
+  width: 50.162px;
+  height: 50.162px;
+  left: 685.027px;
+  top: 202.216px;
+}
+
+/* line 4374, ../sass/screen.scss */
+.Path_906 {
+  overflow: visible;
+  position: absolute;
+  top: 251.986px;
+  left: 700.659px;
+  width: 63.922px;
+  height: 137.355px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4383, ../sass/screen.scss */
+#Path_907 {
+  opacity: 0.1;
+}
+
+/* line 4386, ../sass/screen.scss */
+.Path_907 {
+  overflow: visible;
+  position: absolute;
+  top: 275.346px;
+  left: 685.194px;
+  width: 71.112px;
+  height: 89.709px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4395, ../sass/screen.scss */
+.Path_908 {
+  overflow: visible;
+  position: absolute;
+  top: 274.562px;
+  left: 685.978px;
+  width: 71.112px;
+  height: 89.708px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4404, ../sass/screen.scss */
+.Path_909 {
+  overflow: visible;
+  position: absolute;
+  top: 420.107px;
+  left: 560.312px;
+  width: 1.301px;
+  height: 4.366px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4413, ../sass/screen.scss */
+.Path_910 {
+  overflow: visible;
+  position: absolute;
+  top: 417.443px;
+  left: 495.302px;
+  width: 63.904px;
+  height: 15.125px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4422, ../sass/screen.scss */
+.Path_911 {
+  overflow: visible;
+  position: absolute;
+  top: 396.837px;
+  left: 429.805px;
+  width: 53.226px;
+  height: 37.372px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4431, ../sass/screen.scss */
+.Path_912 {
+  overflow: visible;
+  position: absolute;
+  top: 424.708px;
+  left: 485.868px;
+  width: 1.771px;
+  height: 1.85px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4440, ../sass/screen.scss */
+#Path_913 {
+  opacity: 0.1;
+}
+
+/* line 4443, ../sass/screen.scss */
+.Path_913 {
+  overflow: visible;
+  position: absolute;
+  top: 192.711px;
+  left: 681.351px;
+  width: 95.394px;
+  height: 118.949px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4452, ../sass/screen.scss */
+.Path_914 {
+  overflow: visible;
+  position: absolute;
+  top: 191.688px;
+  left: 682.135px;
+  width: 95.394px;
+  height: 119.188px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4461, ../sass/screen.scss */
+#Sinthaesia_A0_Text_21 {
+  position: absolute;
+  left: 213px;
+  top: 2659px;
+  overflow: visible;
+  width: 265px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Poppins, Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  color: #657783;
+}
+
+/* line 4475, ../sass/screen.scss */
+#Sinthaesia_A0_Text_22 {
+  position: absolute;
+  left: 278px;
+  top: 3840px;
+  overflow: visible;
+  width: 94px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Poppins, Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  color: #3480e3;
+}
+
+/* line 4489, ../sass/screen.scss */
+#Navigation {
+  position: absolute;
+  left: 968px;
+  top: 3840px;
+  overflow: visible;
+  width: 95px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Poppins, Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: #d8dfe8;
+}
+
+/* line 4503, ../sass/screen.scss */
+#Home_A0_Text_24 {
+  position: absolute;
+  left: 968px;
+  top: 3906px;
+  overflow: visible;
+  width: 44px;
+  white-space: nowrap;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #afbed3;
+}
+
+/* line 4519, ../sass/screen.scss */
+#Terms {
+  position: absolute;
+  left: 1244px;
+  top: 3906px;
+  overflow: visible;
+  width: 44px;
+  white-space: nowrap;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #afbed3;
+}
+
+/* line 4535, ../sass/screen.scss */
+#hello_sinthaesia_com {
+  position: absolute;
+  left: 1552px;
+  top: 3906px;
+  overflow: visible;
+  width: 156px;
+  white-space: nowrap;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #afbed3;
+}
+
+/* line 4551, ../sass/screen.scss */
+#Services_A0_Text_27 {
+  position: absolute;
+  left: 968px;
+  top: 3950px;
+  overflow: visible;
+  width: 62px;
+  white-space: nowrap;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #afbed3;
+}
+
+/* line 4567, ../sass/screen.scss */
+#Cookies {
+  position: absolute;
+  left: 1244px;
+  top: 3950px;
+  overflow: visible;
+  width: 59px;
+  white-space: nowrap;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #afbed3;
+}
+
+/* line 4583, ../sass/screen.scss */
+#Boutersem__BE {
+  position: absolute;
+  left: 1552px;
+  top: 3950px;
+  overflow: visible;
+  width: 105px;
+  white-space: nowrap;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #afbed3;
+}
+
+/* line 4599, ../sass/screen.scss */
+#Contact_A0_Text_30 {
+  position: absolute;
+  left: 968px;
+  top: 3994px;
+  overflow: visible;
+  width: 58px;
+  white-space: nowrap;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #afbed3;
+}
+
+/* line 4615, ../sass/screen.scss */
+#Privacy {
+  position: absolute;
+  left: 1244px;
+  top: 3994px;
+  overflow: visible;
+  width: 53px;
+  white-space: nowrap;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #afbed3;
+}
+
+/* line 4631, ../sass/screen.scss */
+#Legal {
+  position: absolute;
+  left: 1244px;
+  top: 3840px;
+  overflow: visible;
+  width: 46px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Poppins, Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: #d8dfe8;
+}
+
+/* line 4645, ../sass/screen.scss */
+#Contact_us {
+  position: absolute;
+  left: 1520px;
+  top: 3840px;
+  overflow: visible;
+  width: 95px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Poppins, Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: #d8dfe8;
+}
+
+/* line 4659, ../sass/screen.scss */
+#Website_designer___developer___A0_Text_34 {
+  position: absolute;
+  left: 278px;
+  top: 3901px;
+  overflow: hidden;
+  width: 421px;
+  height: 49px;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #afbed3;
+}
+
+/* line 4675, ../sass/screen.scss */
+#__Sinthaesia__All_Rights_Reser {
+  position: absolute;
+  left: 278px;
+  top: 3987px;
+  overflow: hidden;
+  width: 421px;
+  height: 27px;
+  line-height: 27px;
+  margin-top: -5px;
+  text-align: left;
+  font-family: SF Pro Display, Poppins;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 17px;
+  color: #afbed3;
+}
+
+/* line 4691, ../sass/screen.scss */
+#envelope_1_ {
+  position: absolute;
+  width: 22.167px;
+  height: 16.625px;
+  left: 1520px;
+  top: 3907px;
+  overflow: visible;
+}
+
+/* line 4699, ../sass/screen.scss */
+#Group_96 {
+  position: absolute;
+  width: 22.167px;
+  height: 16.625px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+
+/* line 4707, ../sass/screen.scss */
+.Path_915 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 22.167px;
+  height: 16.625px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4716, ../sass/screen.scss */
+.Path_916 {
+  overflow: visible;
+  position: absolute;
+  top: 2.323px;
+  left: 2.532px;
+  width: 17.11px;
+  height: 11.987px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4725, ../sass/screen.scss */
+#placeholder {
+  position: absolute;
+  width: 14.063px;
+  height: 20px;
+  left: 1524px;
+  top: 3949px;
+  overflow: visible;
+}
+
+/* line 4733, ../sass/screen.scss */
+#Group_98 {
+  position: absolute;
+  width: 14.063px;
+  height: 20px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+
+/* line 4741, ../sass/screen.scss */
+#Group_97 {
+  position: absolute;
+  width: 14.063px;
+  height: 20px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+
+/* line 4749, ../sass/screen.scss */
+.Path_917 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 14.063px;
+  height: 20px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* line 4758, ../sass/screen.scss */
+#Group_100 {
+  position: absolute;
+  width: 7.031px;
+  height: 7.031px;
+  left: 3.516px;
+  top: 3.516px;
+  overflow: visible;
+}
+
+/* line 4766, ../sass/screen.scss */
+#Group_99 {
+  position: absolute;
+  width: 7.031px;
+  height: 7.031px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+
+/* line 4774, ../sass/screen.scss */
+.Path_918 {
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 7.031px;
+  height: 7.031px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
